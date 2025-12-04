@@ -1,36 +1,167 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Amruta Hegde | Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Amruta | Portfolio</title>
+
+<style>
+    /* --------- Global dark neon theme ---------- */
+    body {
+        margin: 0;
+        font-family: 'Poppins', sans-serif;
+        background: #000000;
+        color: #ffffff;
+        overflow-x: hidden;
+    }
+
+    h1, h2, h3 {
+        color: #00eaff;
+        text-shadow: 0 0 15px #00eaff;
+    }
+
+    a {
+        text-decoration: none;
+        color: #00eaff;
+    }
+
+    /* --------- Hero Section ---------- */
+    .hero {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background: linear-gradient(135deg, #000000 40%, #001e28 100%);
+        animation: bgMove 12s infinite alternate;
+    }
+
+    @keyframes bgMove {
+        0% { background-position: left; }
+        100% { background-position: right; }
+    }
+
+    .hero h1 {
+        font-size: 3rem;
+        margin: 0;
+        animation: fadeIn 2s ease;
+    }
+
+    .hero h2 {
+        font-size: 1.4rem;
+        color: #ccc;
+        margin-top: 10px;
+        animation: fadeIn 2.5s ease;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ----- Sections (Neon Cards) ----- */
+    section {
+        padding: 60px 20px;
+        max-width: 900px;
+        margin: auto;
+    }
+
+    .card {
+        border: 2px solid #00eaff;
+        padding: 25px;
+        border-radius: 10px;
+        margin-bottom: 40px;
+        box-shadow: 0 0 20px #00eaff50;
+        transition: 0.3s;
+        background: rgba(0, 0, 0, 0.4);
+        backdrop-filter: blur(5px);
+    }
+
+    .card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 0 30px #00eaff;
+    }
+
+    ul {
+        line-height: 30px;
+    }
+
+    /* Footer */
+    footer {
+        text-align: center;
+        padding: 20px;
+        margin-top: 50px;
+        color: #777;
+    }
+</style>
+
 </head>
 <body>
-  <h1>Hi, I’m Amruta Hegde 👋</h1>
-  <p>MCA student | Software Development | Machine Learning | Full Stack</p>
 
-  <h2>About Me</h2>
-  <p>I’m an MCA student passionate about creating smart, efficient, and data-driven applications.</p>
+<!-- =================== HERO SECTION =================== -->
+<div class="hero">
+    <h1>Hi, I'm Amruta Hegde</h1>
+    <h2>MCA Student | Software Developer | ML Enthusiast</h2>
+</div>
 
-  <h2>Skills</h2>
-  <ul>
-    <li>Python, Java, C, SQL</li>
-    <li>HTML, CSS, Django, Flask, React</li>
-    <li>Machine Learning, EDA, Tableau, Power BI</li>
-    <li>MySQL, MongoDB</li>
-  </ul>
+<!-- =================== ABOUT =================== -->
+<section>
+    <div class="card">
+        <h2>About Me</h2>
+        <p>
+            I'm an MCA student passionate about creating smart, efficient, and 
+            data-driven applications. I love building real-world solutions using 
+            software development and machine learning.
+        </p>
+    </div>
+</section>
 
-  <h2>Projects</h2>
-  <h3>Online Intelligent Tourist System</h3>
-  <p>Full-stack travel planner with personalized suggestions. Tech: Django, MySQL.</p>
+<!-- =================== SKILLS =================== -->
+<section>
+    <div class="card">
+        <h2>Skills</h2>
+        <ul>
+            <li>Python, Java, C, SQL</li>
+            <li>HTML, CSS, Django, Flask, React</li>
+            <li>Machine Learning, EDA, Tableau, Power BI</li>
+            <li>MySQL, MongoDB</li>
+        </ul>
+    </div>
+</section>
 
-  <h3>AI-Driven University Assistant</h3>
-  <p>AI assistant using NLP, Facial Recognition, IoT.</p>
+<!-- =================== PROJECTS =================== -->
+<section>
+    <div class="card">
+        <h2>Projects</h2>
 
-  <h3>AgroTracking</h3>
-  <p>Farm management dashboard.</p>
+        <h3>Online Intelligent Tourist System</h3>
+        <p>Full-stack travel planner with personalized suggestions.<br>
+        <b>Tech:</b> Django, MySQL</p>
 
-  <h2>Contact</h2>
-  <p>Email: your email</p>
-  <p>GitHub: your link</p>
-  <p>LinkedIn: your link</p>
+        <h3>IPL Match Winner Prediction</h3>
+        <p>Built ML models (Random Forest & SVM) achieving 87% accuracy.<br>
+        <b>Tech:</b> Python, Scikit-learn, Tableau</p>
+
+        <h3>Climate Change EDA Dashboard</h3>
+        <p>Performed exploratory analysis on disasters & climate patterns.<br>
+        <b>Tech:</b> Python, Pandas, Matplotlib</p>
+    </div>
+</section>
+
+<!-- =================== CONTACT =================== -->
+<section>
+    <div class="card">
+        <h2>Contact</h2>
+        <p>Email: amrutagh.mca24@chanakyauniversity.edu.in</p>
+        <p>GitHub: <a href="https://github.com/amrutahere08" target="_blank">amrutahere08</a></p>
+    </div>
+</section>
+
+<!-- =================== FOOTER =================== -->
+<footer>
+    © 2025 Amruta Hegde — All Rights Reserved
+</footer>
+
 </body>
 </html>
