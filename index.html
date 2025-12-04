@@ -130,47 +130,9 @@
       border: 1px solid rgba(0,255,230,0.08);
     }
     .muted { color: #9fbacb; }
-
-    /* Top-left fixed name box */
-    .top-left-box {
-      position: fixed;
-      top: 16px;
-      left: 16px;
-      z-index: 60;
-      background: linear-gradient(90deg, rgba(0,255,230,0.06), rgba(164,0,255,0.04));
-      border: 1px solid rgba(0,255,230,0.09);
-      padding: 8px 12px;
-      border-radius: 10px;
-      backdrop-filter: blur(6px);
-      color: #cffff8;
-      font-weight: 600;
-      box-shadow: 0 6px 22px rgba(0,255,230,0.03);
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .top-left-box .dot {
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      background: linear-gradient(180deg, #00ffe1, #a400ff);
-      box-shadow: 0 0 8px rgba(0,255,230,0.6);
-    }
-
-    /* Ensure nav doesn't overlap content when top-left box present */
-    @media (max-width: 768px) {
-      .top-left-box { top: 12px; left: 12px; padding: 7px 10px; }
-    }
   </style>
 </head>
 <body class="dark-neon">
-
-  <!-- Top-left fixed name box -->
-  <div class="top-left-box" aria-hidden="false">
-    <div class="dot" aria-hidden="true"></div>
-    <div>Amruta Hegde</div>
-  </div>
 
   <!-- Navigation -->
   <nav class="fixed top-0 w-full bg-black/60 backdrop-blur-lg border-b border-cyan-600/10 z-50">
@@ -216,17 +178,18 @@
         </div>
       </div>
 
-      <h1 class="text-5xl md:text-7xl font-bold mb-6 glow-text">
+      <h1 class="text-5xl md:text-7xl font-bold mb-4 glow-text">
         Hi, I'm <span style="background: linear-gradient(90deg,#00ffe1,#a400ff,#ff007a); -webkit-background-clip:text; color:transparent;">Amruta Hegde</span>
       </h1>
 
-      <div class="text-2xl md:text-3xl mb-8 h-12 flex items-center justify-center">
-        <span id="typed-text" style="color:#00ffe1;"></span>
-        <span class="pulse-dot">|</span>
-      </div>
+      <!-- Single subtitle placed directly below the name -->
+      <p class="text-2xl md:text-3xl mb-6" style="color:#00ffe1; font-weight:600;">
+        aspiring software developer / software engineer | learning & building
+      </p>
 
+      <!-- Updated descriptive line as requested -->
       <p class="text-lg md:text-xl mb-12 max-w-3xl mx-auto leading-relaxed">
-        MCA (Data Science) student. Passionate about Machine Learning, Real-Time Analytics, and Visual Storytelling. Proficient in Python, SQL, Power BI, Tableau and hands-on with AI/ML projects.
+        MCA student passionate about software development, software engineering, Python, SQL and hands-on with AI/ML projects.
       </p>
 
       <div class="flex gap-4 justify-center flex-wrap">
@@ -831,39 +794,6 @@
   </footer>
 
   <script>
-    // Typing Animation (updated titles)
-    const titles = [
-      "Data Science Enthusiast",
-      "ML Engineer",
-      "Analytics Specialist",
-      "Aspiring Software Developer/ Software Engineer | Learning & Building",
-      "Python Developer"
-    ];
-    let titleIndex = 0;
-    let charIndex = 0;
-    const typedElement = document.getElementById('typed-text');
-
-    function type() {
-      if (charIndex < titles[titleIndex].length) {
-        typedElement.textContent += titles[titleIndex].charAt(charIndex);
-        charIndex++;
-        setTimeout(type, 90);
-      } else {
-        setTimeout(erase, 1800);
-      }
-    }
-    function erase() {
-      if (charIndex > 0) {
-        typedElement.textContent = titles[titleIndex].substring(0, charIndex - 1);
-        charIndex--;
-        setTimeout(erase, 40);
-      } else {
-        titleIndex = (titleIndex + 1) % titles.length;
-        setTimeout(type, 500);
-      }
-    }
-    type();
-
     // Smooth scroll for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function (e) {
@@ -871,15 +801,20 @@
         const target = document.querySelector(this.getAttribute('href'));
         if (target) {
           target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-          document.getElementById('mobile-menu').classList.add('hidden');
+          const mobileMenu = document.getElementById('mobile-menu');
+          if (mobileMenu) mobileMenu.classList.add('hidden');
         }
       });
     });
 
     // Mobile Menu toggle
-    document.getElementById('menu-btn').addEventListener('click', () => {
-      document.getElementById('mobile-menu').classList.toggle('hidden');
-    });
+    const menuBtn = document.getElementById('menu-btn');
+    if (menuBtn) {
+      menuBtn.addEventListener('click', () => {
+        const m = document.getElementById('mobile-menu');
+        if (m) m.classList.toggle('hidden');
+      });
+    }
 
     // Fade-in on scroll using IntersectionObserver
     const fadeElements = document.querySelectorAll('.fade-in');
@@ -891,20 +826,23 @@
     fadeElements.forEach(el => observer.observe(el));
 
     // Contact form opens mailto with Amruta's email
-    document.getElementById('contact-form').addEventListener('submit', function(e) {
-      e.preventDefault();
-      const name = document.getElementById('name').value.trim();
-      const email = document.getElementById('email').value.trim();
-      const message = document.getElementById('message').value.trim();
+    const contactForm = document.getElementById('contact-form');
+    if (contactForm) {
+      contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const name = document.getElementById('name').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const message = document.getElementById('message').value.trim();
 
-      const subject = encodeURIComponent(`Portfolio Contact from ${name || 'Website Visitor'}`);
-      const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
-      const mailtoLink = `mailto:hegdeamruta28@gmail.com?subject=${subject}&body=${body}`;
+        const subject = encodeURIComponent(`Portfolio Contact from ${name || 'Website Visitor'}`);
+        const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
+        const mailtoLink = `mailto:hegdeamruta28@gmail.com?subject=${subject}&body=${body}`;
 
-      window.location.href = mailtoLink;
-      this.reset();
-      setTimeout(()=> alert('Opening your email client to send the message to hegdeamruta28@gmail.com'), 200);
-    });
+        window.location.href = mailtoLink;
+        this.reset();
+        setTimeout(()=> alert('Opening your email client to send the message to hegdeamruta28@gmail.com'), 200);
+      });
+    }
   </script>
 </body>
 </html>
