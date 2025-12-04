@@ -11,21 +11,14 @@
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
 
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Inter', sans-serif; overflow-x: hidden; background: #010103; color: #e6f7ff; }
+    body { font-family: 'Inter', sans-serif; overflow-x: hidden; background: #05060a; color: #e6f7ff; }
 
-    /* Neon-dark animated background strip */
-    #particle-canvas { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; }
-
-    .gradient-animated {
-      background: linear-gradient(120deg, rgba(2,6,23,1) 0%, rgba(3,7,25,1) 30%, rgba(6,2,20,1) 70%, rgba(2,6,23,1) 100%);
-      background-size: 400% 400%;
-      animation: gradientMove 18s ease infinite;
-    }
-
-    @keyframes gradientMove {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
+    /* Static dark-neon background (no motion) */
+    .dark-neon {
+      background: radial-gradient(1200px 600px at 10% 10%, rgba(0,255,230,0.03), transparent 8%),
+                  radial-gradient(900px 400px at 90% 80%, rgba(164,0,255,0.03), transparent 8%),
+                  linear-gradient(180deg, #020214 0%, #030316 60%, #05060a 100%);
+      background-attachment: fixed;
     }
 
     /* Neon glows */
@@ -115,13 +108,6 @@
       opacity: 0.9;
     }
 
-    .floating { animation: float 3.4s ease-in-out infinite; }
-
-    @keyframes float {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-12px); }
-    }
-
     .pulse-dot { animation: pulse 1.8s cubic-bezier(0.4, 0, 0.6, 1) infinite; color: #00ffe1; }
 
     @keyframes pulse {
@@ -144,11 +130,47 @@
       border: 1px solid rgba(0,255,230,0.08);
     }
     .muted { color: #9fbacb; }
+
+    /* Top-left fixed name box */
+    .top-left-box {
+      position: fixed;
+      top: 16px;
+      left: 16px;
+      z-index: 60;
+      background: linear-gradient(90deg, rgba(0,255,230,0.06), rgba(164,0,255,0.04));
+      border: 1px solid rgba(0,255,230,0.09);
+      padding: 8px 12px;
+      border-radius: 10px;
+      backdrop-filter: blur(6px);
+      color: #cffff8;
+      font-weight: 600;
+      box-shadow: 0 6px 22px rgba(0,255,230,0.03);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .top-left-box .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: linear-gradient(180deg, #00ffe1, #a400ff);
+      box-shadow: 0 0 8px rgba(0,255,230,0.6);
+    }
+
+    /* Ensure nav doesn't overlap content when top-left box present */
+    @media (max-width: 768px) {
+      .top-left-box { top: 12px; left: 12px; padding: 7px 10px; }
+    }
   </style>
 </head>
-<body class="gradient-animated">
+<body class="dark-neon">
 
-  <canvas id="particle-canvas"></canvas>
+  <!-- Top-left fixed name box -->
+  <div class="top-left-box" aria-hidden="false">
+    <div class="dot" aria-hidden="true"></div>
+    <div>Amruta Hegde</div>
+  </div>
 
   <!-- Navigation -->
   <nav class="fixed top-0 w-full bg-black/60 backdrop-blur-lg border-b border-cyan-600/10 z-50">
@@ -185,7 +207,7 @@
   <!-- Hero Section -->
   <section id="home" class="min-h-screen flex items-center justify-center pt-20 px-6">
     <div class="text-center max-w-5xl">
-      <div class="mb-8 floating">
+      <div class="mb-8">
         <div class="w-40 h-40 mx-auto rounded-full p-1 profile-glow" style="background: radial-gradient(circle at 30% 20%, rgba(0,255,230,0.12), rgba(164,0,255,0.08));">
           <img src="photo-Photoroom (1).png" alt="Amruta Hegde" class="w-full h-full rounded-full object-cover bg-[#06060a]" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
           <div class="w-full h-full rounded-full bg-[#06060a] items-center justify-center text-6xl" style="display: none;">
@@ -203,7 +225,7 @@
         <span class="pulse-dot">|</span>
       </div>
 
-      <p class="text-lg md:text-xl muted mb-12 max-w-3xl mx-auto leading-relaxed">
+      <p class="text-lg md:text-xl mb-12 max-w-3xl mx-auto leading-relaxed">
         MCA (Data Science) student. Passionate about Machine Learning, Real-Time Analytics, and Visual Storytelling. Proficient in Python, SQL, Power BI, Tableau and hands-on with AI/ML projects.
       </p>
 
@@ -809,83 +831,12 @@
   </footer>
 
   <script>
-    // Particle canvas neon network
-    const canvas = document.getElementById('particle-canvas');
-    const ctx = canvas.getContext('2d');
-    function resizeCanvas() {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
-    }
-    resizeCanvas();
-    window.addEventListener('resize', resizeCanvas);
-
-    const particles = [];
-    const particleCount = Math.max(60, Math.floor((canvas.width * canvas.height) / 100000)); // scale with screen
-
-    class Particle {
-      constructor() {
-        this.reset();
-      }
-      reset() {
-        this.x = Math.random() * canvas.width;
-        this.y = Math.random() * canvas.height;
-        const speed = 0.2 + Math.random() * 0.7;
-        const angle = Math.random() * Math.PI * 2;
-        this.vx = Math.cos(angle) * speed;
-        this.vy = Math.sin(angle) * speed;
-        this.radius = 0.8 + Math.random() * 2.4;
-        this.hue = 180 + Math.random() * 160; // neon hues
-      }
-      update() {
-        this.x += this.vx;
-        this.y += this.vy;
-        if (this.x < -20 || this.x > canvas.width + 20 || this.y < -20 || this.y > canvas.height + 20) {
-          this.reset();
-        }
-      }
-      draw() {
-        ctx.beginPath();
-        ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(0,255,225,${0.08 + Math.random()*0.22})`;
-        ctx.fill();
-      }
-    }
-
-    for (let i = 0; i < particleCount; i++) particles.push(new Particle());
-
-    function connectParticles() {
-      for (let i=0;i<particles.length;i++){
-        for (let j=i+1;j<particles.length;j++){
-          const a = particles[i], b = particles[j];
-          const dx = a.x - b.x, dy = a.y - b.y;
-          const dist = Math.hypot(dx, dy);
-          if (dist < 140) {
-            ctx.beginPath();
-            ctx.moveTo(a.x, a.y);
-            ctx.lineTo(b.x, b.y);
-            const alpha = 0.18 - (dist / 800);
-            ctx.strokeStyle = `rgba(0,255,230,${Math.max(0, alpha)})`;
-            ctx.lineWidth = 0.9;
-            ctx.stroke();
-          }
-        }
-      }
-    }
-
-    function animate() {
-      ctx.clearRect(0,0,canvas.width,canvas.height);
-      particles.forEach(p => { p.update(); p.draw(); });
-      connectParticles();
-      requestAnimationFrame(animate);
-    }
-    animate();
-
-    // Typing Animation (titles can stay)
+    // Typing Animation (updated titles)
     const titles = [
       "Data Science Enthusiast",
       "ML Engineer",
       "Analytics Specialist",
-      "Full Stack Developer",
+      "Aspiring Software Developer/ Software Engineer | Learning & Building",
       "Python Developer"
     ];
     let titleIndex = 0;
