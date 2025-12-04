@@ -1,131 +1,194 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Amruta Hegde</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amruta Hegde</title>
 
-<style>
-    body {
-        margin: 0;
-        font-family: Arial, sans-serif;
-        background: black;
-        color: white;
-        height: 100vh;
-        overflow-x: hidden;
-    }
+    <style>
+        body {
+            margin: 0;
+            background: #050b18;
+            font-family: 'Poppins', sans-serif;
+            color: white;
+            text-align: center;
+        }
 
-    /* NAVBAR */
-    .navbar {
-        width: 100%;
-        padding: 20px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        position: fixed;
-        top: 0;
-        left: 0;
-        box-sizing: border-box;
-        z-index: 100;
-    }
+        /* NAVBAR */
+        .navbar {
+            width: 100%;
+            padding: 18px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+            background: rgba(5, 11, 24, 0.9);
+            backdrop-filter: blur(8px);
+        }
 
-    .logo {
-        font-size: 18px;
-        font-weight: bold;
-        letter-spacing: 1px;
-    }
+        .logo {
+            font-size: 18px;
+            font-weight: 600;
+            background: linear-gradient(90deg, #6b8bff, #c77dff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
 
-    /* HAMBURGER */
-    .hamburger {
-        font-size: 32px;
-        cursor: pointer;
-        padding-right: 10px;
-    }
+        /* HAMBURGER */
+        .hamburger {
+            font-size: 28px;
+            cursor: pointer;
+            padding: 8px;
+            color: white;
+        }
 
-    /* DROPDOWN MENU PANEL */
-    .menu {
-        position: fixed;
-        top: 70px;
-        right: 20px;
-        width: 180px;
-        background: #111;
-        border: 1px solid #444;
-        border-radius: 10px;
-        padding: 10px 0;
-        display: none;
-        flex-direction: column;
-        text-align: left;
-        z-index: 200;
-    }
+        /* DROPDOWN */
+        .menu {
+            position: fixed;
+            right: 20px;
+            top: 60px;
+            width: 180px;
+            background: rgba(10, 15, 30, 0.95);
+            border: 1px solid #23355a;
+            border-radius: 8px;
+            padding: 10px 0;
+            display: none;
+            flex-direction: column;
+            animation: fadeIn 0.3s ease;
+        }
 
-    .menu a {
-        padding: 12px 20px;
-        text-decoration: none;
-        color: white;
-        display: block;
-        font-size: 15px;
-    }
+        .menu a {
+            padding: 12px 0;
+            text-decoration: none;
+            color: #c6d4ff;
+            font-size: 15px;
+            display: block;
+            transition: 0.3s;
+        }
 
-    .menu a:hover {
-        background: #222;
-    }
+        .menu a:hover {
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+        }
 
-    /* CENTER CONTENT */
-    .hero {
-        height: 100vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        padding: 0 20px;
-        margin-top: -40px;
-    }
+        @keyframes fadeIn {
+            from {opacity: 0; transform: translateY(-5px);}
+            to {opacity: 1; transform: translateY(0);}
+        }
 
-    .hero h1 {
-        font-size: 42px;
-        margin-bottom: 10px;
-    }
+        /* HERO SECTION */
+        .hero {
+            margin-top: 140px;
+            padding: 60px 20px;
+        }
 
-    .hero p {
-        font-size: 20px;
-        width: 80%;
-        max-width: 600px;
-    }
-</style>
+        .hero h1 {
+            font-size: 42px;
+            background: linear-gradient(90deg, #8ab4ff, #c77dff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: glow 2s infinite alternate;
+        }
 
-<script>
-    function toggleMenu() {
-        var m = document.getElementById("dropdown");
-        m.style.display = (m.style.display === "flex") ? "none" : "flex";
-    }
-</script>
+        @keyframes glow {
+            from { text-shadow: 0 0 8px #5a79ff; }
+            to { text-shadow: 0 0 16px #c77dff; }
+        }
 
+        .content-section {
+            margin: 120px auto;
+            width: 80%;
+            max-width: 900px;
+            padding: 40px;
+            background: rgba(15, 20, 40, 0.4);
+            border: 1px solid #2c3e66;
+            border-radius: 12px;
+            box-shadow: 0 0 20px rgba(80, 130, 255, 0.25);
+            animation: fadeUp 1s ease forwards;
+        }
+
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h2 {
+            background: linear-gradient(90deg, #6b8bff, #c77dff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
 </head>
+
 <body>
 
-<!-- NAVBAR -->
-<div class="navbar">
-    <div class="logo">Amruta Hegde</div>
-    <div class="hamburger" onclick="toggleMenu()">☰</div>
-</div>
+    <!-- NAVBAR -->
+    <div class="navbar">
+        <div class="logo">Amruta Hegde</div>
+        <div class="hamburger" onclick="toggleMenu()">☰</div>
+    </div>
 
-<!-- DROPDOWN MENU -->
-<div class="menu" id="dropdown">
-    <a href="#">Home</a>
-    <a href="#">About</a>
-    <a href="#">Skills</a>
-    <a href="#">Projects</a>
-    <a href="#">Experience</a>
-    <a href="#">Certifications</a>
-    <a href="#">Contact</a>
-</div>
+    <!-- DROPDOWN -->
+    <div class="menu" id="dropdown">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#certifications">Certifications</a>
+        <a href="#contact">Contact</a>
+    </div>
 
-<!-- CENTER CONTENT -->
-<div class="hero">
-    <h1>Hi, I'm Amruta Hegde</h1>
-    <p>Welcome to my portfolio! I am passionate about software development, web technologies, and crafting digital experiences.</p>
-</div>
+    <!-- HERO SECTION -->
+    <section class="hero" id="home">
+        <h1>Hi, I'm Amruta Hegde</h1>
+        <p>Aspiring MCA Student & Software Developer</p>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="content-section" id="about">
+        <h2>About Me</h2>
+        <p>Write your intro here...</p>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="content-section" id="skills">
+        <h2>Skills</h2>
+        <p>Your skills...</p>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="content-section" id="projects">
+        <h2>Projects</h2>
+        <p>Project details here...</p>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section class="content-section" id="experience">
+        <h2>Experience</h2>
+        <p>Your experience...</p>
+    </section>
+
+    <!-- CERTIFICATIONS -->
+    <section class="content-section" id="certifications">
+        <h2>Certifications</h2>
+        <p>Your certifications...</p>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="content-section" id="contact">
+        <h2>Contact</h2>
+        <p>Your contact info...</p>
+    </section>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById("dropdown");
+            menu.style.display = (menu.style.display === "flex") ? "none" : "flex";
+        }
+    </script>
 
 </body>
 </html>
