@@ -3,185 +3,129 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Amruta Hegde | Portfolio</title>
+<title>Amruta Hegde</title>
 
 <style>
-/* ================= DARK BASE THEME ================== */
-body {
-    margin: 0;
-    font-family: 'Poppins', sans-serif;
-    background: #000;
-    color: #fff;
-}
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: black;
+        color: white;
+        height: 100vh;
+        overflow-x: hidden;
+    }
 
-/* ================= TOP NAVBAR ================== */
-.navbar {
-    width: 100%;
-    padding: 15px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: rgba(10, 10, 25, 0.8);
-    position: fixed;
-    top: 0;
-    z-index: 1000;
-    backdrop-filter: blur(10px);
-}
+    /* NAVBAR */
+    .navbar {
+        width: 100%;
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        box-sizing: border-box;
+        z-index: 100;
+    }
 
-/* Your Name (Top Left) */
-.logo {
-    font-size: 20px;
-    font-weight: 600;
-    background: linear-gradient(90deg, #00eaff, #d06bff);
-    -webkit-background-clip: text;
-    color: transparent;
-}
+    .logo {
+        font-size: 18px;
+        font-weight: bold;
+        letter-spacing: 1px;
+    }
 
-/* Hamburger Icon */
-.hamburger {
-    font-size: 26px;
-    cursor: pointer;
-}
+    /* HAMBURGER */
+    .hamburger {
+        font-size: 32px;
+        cursor: pointer;
+        padding-right: 10px;
+    }
 
-/* ================= DROPDOWN MENU ================== */
-.menu {
-    position: fixed;
-    top: 60px;
-    right: 0;
-    width: 70%;
-    background: rgba(15, 15, 40, 0.95);
-    padding: 20px;
-    display: none;
-    flex-direction: column;
-}
+    /* DROPDOWN MENU PANEL */
+    .menu {
+        position: fixed;
+        top: 70px;
+        right: 20px;
+        width: 180px;
+        background: #111;
+        border: 1px solid #444;
+        border-radius: 10px;
+        padding: 10px 0;
+        display: none;
+        flex-direction: column;
+        text-align: left;
+        z-index: 200;
+    }
 
-.menu a {
-    color: white;
-    text-decoration: none;
-    margin: 12px 0;
-    font-size: 18px;
-}
+    .menu a {
+        padding: 12px 20px;
+        text-decoration: none;
+        color: white;
+        display: block;
+        font-size: 15px;
+    }
 
-/* Menu visible state */
-.menu.show {
-    display: flex;
-}
+    .menu a:hover {
+        background: #222;
+    }
 
-/* ================= SECTION STYLING ================== */
-section {
-    padding: 100px 20px 40px;
-}
+    /* CENTER CONTENT */
+    .hero {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 0 20px;
+        margin-top: -40px;
+    }
 
-h1, h2 {
-    color: #00eaff;
-    text-shadow: 0 0 15px #00eaff;
-}
+    .hero h1 {
+        font-size: 42px;
+        margin-bottom: 10px;
+    }
 
-.card {
-    background: rgba(0,0,0,0.4);
-    border: 2px solid #00eaff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 15px #00eaff50;
-    margin-bottom: 30px;
-}
-
-/* Body padding so content don't hide behind navbar */
-body { padding-top: 70px; }
-
+    .hero p {
+        font-size: 20px;
+        width: 80%;
+        max-width: 600px;
+    }
 </style>
-</head>
 
+<script>
+    function toggleMenu() {
+        var m = document.getElementById("dropdown");
+        m.style.display = (m.style.display === "flex") ? "none" : "flex";
+    }
+</script>
+
+</head>
 <body>
 
-<!-- =============== NAVBAR =============== -->
+<!-- NAVBAR -->
 <div class="navbar">
     <div class="logo">Amruta Hegde</div>
     <div class="hamburger" onclick="toggleMenu()">☰</div>
 </div>
 
-<!-- =============== DROPDOWN MENU =============== -->
-<div id="menu" class="menu">
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#projects">Projects</a>
-    <a href="#experience">Experience</a>
-    <a href="#certifications">Certifications</a>
-    <a href="#contact">Contact</a>
+<!-- DROPDOWN MENU -->
+<div class="menu" id="dropdown">
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Skills</a>
+    <a href="#">Projects</a>
+    <a href="#">Experience</a>
+    <a href="#">Certifications</a>
+    <a href="#">Contact</a>
 </div>
 
-<!-- =============== HERO SECTION =============== -->
-<section id="home">
+<!-- CENTER CONTENT -->
+<div class="hero">
     <h1>Hi, I'm Amruta Hegde</h1>
-    <p>MCA Student | Developer | ML Enthusiast</p>
-</section>
-
-<!-- =============== ABOUT SECTION =============== -->
-<section id="about">
-    <div class="card">
-        <h2>About Me</h2>
-        <p>
-        I'm an MCA student passionate about creating smart, efficient and data-driven applications.
-        </p>
-    </div>
-</section>
-
-<!-- =============== SKILLS =============== -->
-<section id="skills">
-    <div class="card">
-        <h2>Skills</h2>
-        <ul>
-            <li>Python, Java, C, SQL</li>
-            <li>Django, Flask, React</li>
-            <li>Machine Learning, EDA, Tableau</li>
-            <li>MySQL, MongoDB</li>
-        </ul>
-    </div>
-</section>
-
-<!-- =============== PROJECTS =============== -->
-<section id="projects">
-    <div class="card">
-        <h2>Projects</h2>
-        <p>• Online Intelligent Tourist System – Django, MySQL</p>
-        <p>• AI-Driven University Assistant – Python, TensorFlow, NLP</p>
-        <p>• AgroTracking – Dashboard-based farm management system</p>
-    </div>
-</section>
-
-<!-- =============== EXPERIENCE =============== -->
-<section id="experience">
-    <div class="card">
-        <h2>Experience</h2>
-        <p>No formal experience yet — actively building real-world projects!</p>
-    </div>
-</section>
-
-<!-- =============== CERTIFICATIONS =============== -->
-<section id="certifications">
-    <div class="card">
-        <h2>Certifications</h2>
-        <p>• IBM SkillsBuild</p>
-        <p>• Google Data Analytics (Ongoing)</p>
-    </div>
-</section>
-
-<!-- =============== CONTACT =============== -->
-<section id="contact">
-    <div class="card">
-        <h2>Contact</h2>
-        <p>Email: amrutagh.mca24@chanakyauniversity.edu.in</p>
-        <p>GitHub: <a href="https://github.com/amrutahere08" target="_blank">amrutahere08</a></p>
-    </div>
-</section>
-
-<!-- =============== JAVASCRIPT FOR MENU =============== -->
-<script>
-function toggleMenu() {
-    document.getElementById("menu").classList.toggle("show");
-}
-</script>
+    <p>Welcome to my portfolio! I am passionate about software development, web technologies, and crafting digital experiences.</p>
+</div>
 
 </body>
 </html>
