@@ -9,21 +9,15 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
-
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body { font-family: 'Inter', sans-serif; overflow-x: hidden; background: #05060a; color: #e6f7ff; }
-
-    /* Static dark-neon background (no motion) */
     .dark-neon {
       background: radial-gradient(1200px 600px at 10% 10%, rgba(0,255,230,0.03), transparent 8%),
                   radial-gradient(900px 400px at 90% 80%, rgba(164,0,255,0.03), transparent 8%),
                   linear-gradient(180deg, #020214 0%, #030316 60%, #05060a 100%);
       background-attachment: fixed;
     }
-
-    /* Neon glows */
     .glow-text { text-shadow: 0 0 18px rgba(0,255,230,0.25), 0 0 40px rgba(255,0,200,0.06); }
-
     .card-3d {
       transform-style: preserve-3d;
       transition: all 0.45s cubic-bezier(0.23, 1, 0.32, 1);
@@ -32,13 +26,11 @@
       backdrop-filter: blur(6px);
       border: 1px solid rgba(255,255,255,0.03);
     }
-
     .card-3d:hover {
       transform: translateY(-8px) rotateX(3deg);
       box-shadow: 0 25px 60px rgba(0,255,230,0.06), 0 8px 30px rgba(255,0,200,0.04);
       border-color: rgba(0,255,230,0.08);
     }
-
     .skill-bar {
       position: relative;
       height: 8px;
@@ -46,7 +38,6 @@
       border-radius: 999px;
       overflow: hidden;
     }
-
     .skill-progress {
       height: 100%;
       background: linear-gradient(90deg, #00ffe1, #a400ff, #ff007a);
@@ -56,12 +47,10 @@
       transform-origin: left;
       box-shadow: 0 6px 20px rgba(0,255,225,0.06), inset 0 -6px 18px rgba(0,0,0,0.25);
     }
-
     @keyframes fillBar {
       from { transform: scaleX(0); }
       to { transform: scaleX(1); }
     }
-
     .skill-progress::after {
       content: '';
       position: absolute;
@@ -73,30 +62,25 @@
       animation: shimmer 2.2s infinite;
       mix-blend-mode: overlay;
     }
-
     @keyframes shimmer {
       0% { transform: translateX(-100%); }
       100% { transform: translateX(100%); }
     }
-
     .fade-in {
       opacity: 0;
       transform: translateY(30px);
       transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
     }
-
     .fade-in.visible {
       opacity: 1;
       transform: translateY(0);
     }
-
     .gradient-border {
       position: relative;
       border-radius: 12px;
       background: linear-gradient(145deg, rgba(6,6,10,0.6), rgba(8,8,12,0.5));
       overflow: visible;
     }
-
     .gradient-border::after {
       content: '';
       position: absolute;
@@ -107,14 +91,11 @@
       filter: blur(10px);
       opacity: 0.9;
     }
-
     .pulse-dot { animation: pulse 1.8s cubic-bezier(0.4, 0, 0.6, 1) infinite; color: #00ffe1; }
-
     @keyframes pulse {
       0%, 100% { opacity: 1; transform: scale(1); }
       50% { opacity: 0.5; transform: scale(0.9); }
     }
-
     .profile-glow {
       box-shadow: 0 0 34px rgba(0,255,230,0.12), 0 0 80px rgba(164,0,255,0.06);
       transition: all 0.28s ease;
@@ -123,8 +104,6 @@
       box-shadow: 0 0 48px rgba(0,255,230,0.18), 0 0 110px rgba(255,0,122,0.06);
       transform: scale(1.04);
     }
-
-    /* Neon utility tweaks */
     a.neon-btn {
       background: linear-gradient(90deg, rgba(0,255,230,0.12), rgba(164,0,255,0.12));
       border: 1px solid rgba(0,255,230,0.08);
@@ -182,12 +161,10 @@
         Hi, I'm <span style="background: linear-gradient(90deg,#00ffe1,#a400ff,#ff007a); -webkit-background-clip:text; color:transparent;">Amruta Hegde</span>
       </h1>
 
-      <!-- Single subtitle placed directly below the name -->
       <p class="text-2xl md:text-3xl mb-6" style="color:#00ffe1; font-weight:600;">
         Aspiring Software Developer / Software Engineer | Learning & Building
       </p>
 
-      <!-- Updated descriptive line as requested -->
       <p class="text-lg md:text-xl mb-12 max-w-3xl mx-auto leading-relaxed">
         MCA student passionate about software development, software engineering, Python, SQL and hands-on with AI/ML projects.
       </p>
@@ -235,7 +212,6 @@
                 <div style="color:#00ffe1">8.48 (MCA)</div>
               </div>
             </div>
-
             <div class="flex items-center gap-3">
               <i class="fas fa-map-marker-alt text-2xl" style="color:#a400ff"></i>
               <div>
@@ -243,7 +219,6 @@
                 <div style="color:#00ffe1">Bengaluru, India</div>
               </div>
             </div>
-
             <div class="flex items-center gap-3">
               <i class="fas fa-language text-2xl" style="color:#a400ff"></i>
               <div>
@@ -251,7 +226,6 @@
                 <div style="color:#00ffe1">English (Fluent), Kannada (Advanced)</div>
               </div>
             </div>
-
             <div class="flex items-center gap-3">
               <i class="fas fa-lightbulb text-2xl" style="color:#a400ff"></i>
               <div>
@@ -283,13 +257,12 @@
             <div>
               <div class="flex justify-between mb-2">
                 <span>Python</span>
-                <span style="color:#00ffe1">90%</span>
+                <span style="color:#00ffe1">80%</span>
               </div>
               <div class="skill-bar">
-                <div class="skill-progress" style="width: 90%"></div>
+                <div class="skill-progress" style="width: 80%"></div>
               </div>
             </div>
-
             <div>
               <div class="flex justify-between mb-2">
                 <span>Java</span>
@@ -299,7 +272,6 @@
                 <div class="skill-progress" style="width: 85%"></div>
               </div>
             </div>
-
             <div>
               <div class="flex justify-between mb-2">
                 <span>SQL</span>
@@ -309,7 +281,6 @@
                 <div class="skill-progress" style="width: 88%"></div>
               </div>
             </div>
-
             <div>
               <div class="flex justify-between mb-2">
                 <span>C</span>
@@ -319,7 +290,6 @@
                 <div class="skill-progress" style="width: 75%"></div>
               </div>
             </div>
-
             <div>
               <div class="flex justify-between mb-2">
                 <span>HTML/CSS</span>
@@ -341,13 +311,12 @@
             <div>
               <div class="flex justify-between mb-2">
                 <span>Machine Learning</span>
-                <span style="color:#ff007a">85%</span>
+                <span style="color:#ff007a">70%</span>
               </div>
               <div class="skill-bar">
-                <div class="skill-progress" style="width: 85%"></div>
+                <div class="skill-progress" style="width: 70%"></div>
               </div>
             </div>
-
             <div>
               <div class="flex justify-between mb-2">
                 <span>AI Tools</span>
@@ -357,27 +326,24 @@
                 <div class="skill-progress" style="width: 75%"></div>
               </div>
             </div>
-
             <div>
               <div class="flex justify-between mb-2">
                 <span>EDA & Data Analysis</span>
-                <span style="color:#a400ff">90%</span>
+                <span style="color:#a400ff">80%</span>
               </div>
               <div class="skill-bar">
-                <div class="skill-progress" style="width: 90%"></div>
+                <div class="skill-progress" style="width: 80%"></div>
               </div>
             </div>
-
             <div>
               <div class="flex justify-between mb-2">
                 <span>Exploratory Data Analysis</span>
-                <span style="color:#a400ff">88%</span>
+                <span style="color:#a400ff">80%</span>
               </div>
               <div class="skill-bar">
-                <div class="skill-progress" style="width: 88%"></div>
+                <div class="skill-progress" style="width: 80%"></div>
               </div>
             </div>
-
             <div>
               <div class="flex justify-between mb-2">
                 <span>Real-Time Analytics (Kafka)</span>
@@ -403,7 +369,6 @@
               </div>
               <div class="skill-bar"><div class="skill-progress" style="width: 88%"></div></div>
             </div>
-
             <div>
               <div class="flex justify-between mb-2">
                 <span>Tableau</span>
@@ -411,7 +376,6 @@
               </div>
               <div class="skill-bar"><div class="skill-progress" style="width: 85%"></div></div>
             </div>
-
             <div>
               <div class="flex justify-between mb-2">
                 <span>Matplotlib & Seaborn</span>
@@ -419,7 +383,6 @@
               </div>
               <div class="skill-bar"><div class="skill-progress" style="width: 88%"></div></div>
             </div>
-
             <div>
               <div class="flex justify-between mb-2">
                 <span>Advanced Excel</span>
@@ -443,7 +406,6 @@
               </div>
               <div class="skill-bar"><div class="skill-progress" style="width: 85%"></div></div>
             </div>
-
             <div>
               <div class="flex justify-between mb-2">
                 <span>VS Code</span>
@@ -451,7 +413,6 @@
               </div>
               <div class="skill-bar"><div class="skill-progress" style="width: 90%"></div></div>
             </div>
-
             <div>
               <div class="flex justify-between mb-2">
                 <span>PyCharm</span>
@@ -459,7 +420,6 @@
               </div>
               <div class="skill-bar"><div class="skill-progress" style="width: 88%"></div></div>
             </div>
-
             <div>
               <div class="flex justify-between mb-2">
                 <span>Google Colab</span>
@@ -467,7 +427,6 @@
               </div>
               <div class="skill-bar"><div class="skill-progress" style="width: 92%"></div></div>
             </div>
-
             <div>
               <div class="flex justify-between mb-2">
                 <span>Tally & MS Office</span>
@@ -513,24 +472,23 @@
       <div class="w-24 h-1" style="background: linear-gradient(90deg,#00ffe1,#a400ff); margin: 0 auto 3.5rem;"></div>
 
       <div class="grid md:grid-cols-2 gap-8">
-        <!-- 1) Online Intelligent Tourist System (new: placed first) -->
+        <!-- 1) Online Intelligent Tourist System (update as per requirements) -->
         <div class="card-3d gradient-border p-6">
           <div class="flex items-center gap-3 mb-4">
             <i class="fas fa-map-signs text-3xl" style="color:#00ffe1"></i>
             <h3 class="text-xl font-bold">Online Intelligent Tourist System</h3>
           </div>
           <p class="muted mb-4">
-            An intelligent web-based system that provides personalized travel recommendations using user preferences, location data and ML-based similarity matching. Includes interactive maps and optimized itinerary suggestions.
+            An intelligent web-based system that provides personalized travel recommendations using user preferences, location data and ML-based similarity matching. Developed as a full stack web application including interactive maps and optimized itinerary suggestions.
           </p>
           <div class="flex flex-wrap gap-2 mb-4">
             <span class="px-3 py-1 rounded-full text-sm" style="background: rgba(0,255,225,0.06); color:#00ffe1;">Web App</span>
-            <span class="px-3 py-1 rounded-full text-sm" style="background: rgba(164,0,255,0.06); color:#a400ff;">Machine Learning</span>
-            <span class="px-3 py-1 rounded-full text-sm" style="background: rgba(255,0,122,0.06); color:#ff007a;">Recommendation</span>
+            <span class="px-3 py-1 rounded-full text-sm" style="background: rgba(164,0,255,0.06); color:#a400ff;">Full Stack Development</span>
           </div>
-          <div class="text-sm muted">Published: November 2025</div>
+          <div class="text-sm muted">Published: July 2024</div>
         </div>
 
-        <!-- 2) IPL Match Outcome Prediction (added) -->
+        <!-- 2) IPL Match Outcome Prediction -->
         <div class="card-3d gradient-border p-6">
           <div class="flex items-center gap-3 mb-4">
             <i class="fas fa-cricket text-3xl" style="color:#a400ff"></i>
@@ -544,10 +502,10 @@
             <span class="px-3 py-1 rounded-full text-sm" style="background: rgba(164,0,255,0.06); color:#a400ff;">Sports Analytics</span>
             <span class="px-3 py-1 rounded-full text-sm" style="background: rgba(255,0,122,0.06); color:#ff007a;">Ensemble Models</span>
           </div>
-          <div class="text-sm muted">Published: August 2025</div>
+          <div class="text-sm muted">Published: June 2025</div>
         </div>
 
-        <!-- 3) AgroTracking (replaces Accident Record Management System) -->
+        <!-- 3) AgroTracking -->
         <div class="card-3d gradient-border p-6">
           <div class="flex items-center gap-3 mb-4">
             <i class="fas fa-seedling text-3xl" style="color:#7cff7a"></i>
@@ -562,6 +520,23 @@
             <span class="px-3 py-1 rounded-full text-sm" style="background: rgba(255,0,122,0.06); color:#ff007a;">Supply Chain</span>
           </div>
           <div class="text-sm muted">Published: July 2025</div>
+        </div>
+
+        <!-- 4) Climate Change and Disaster Impact Analysis on Data Visualization (NEW PROJECT) -->
+        <div class="card-3d gradient-border p-6">
+          <div class="flex items-center gap-3 mb-4">
+            <i class="fas fa-globe-asia text-3xl" style="color:#00ffe1"></i>
+            <h3 class="text-xl font-bold">Climate Change and Disaster Impact Analysis on Data Visualization</h3>
+          </div>
+          <p class="muted mb-4">
+            Explored effects of climate change and disasters using public datasets and interactive dashboards. Visualized trends and correlations in climate events, disaster frequencies and their impact using advanced visualization tools.
+          </p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="px-3 py-1 rounded-full text-sm" style="background: rgba(0,255,225,0.06); color:#00ffe1;">Data Visualization</span>
+            <span class="px-3 py-1 rounded-full text-sm" style="background: rgba(164,0,255,0.06); color:#a400ff;">Climate Analytics</span>
+            <span class="px-3 py-1 rounded-full text-sm" style="background: rgba(255,0,122,0.06); color:#ff007a;">Public Data</span>
+          </div>
+          <div class="text-sm muted">Published: June 2025</div>
         </div>
 
       </div>
@@ -588,7 +563,6 @@
             </div>
           </div>
         </div>
-
         <div class="card-3d gradient-border p-6">
           <div class="flex items-start gap-4">
             <div class="text-4xl">🎓</div>
@@ -600,7 +574,18 @@
             </div>
           </div>
         </div>
-
+        <div class="card-3d gradient-border p-6">
+          <div class="flex items-start gap-4">
+            <div class="text-4xl">💼</div>
+            <div class="flex-1">
+              <h3 class="text-2xl font-bold mb-2">SVARKS Information Technology LLP</h3>
+              <div style="color:#00ffe1" class="mb-2">Full Stack Development Intern</div>
+              <div class="muted mb-2">Completed 245 hours | April 2024 – June 2024</div>
+              <div class="muted mb-2">Rated: <span style="color:#a400ff">8/10</span></div>
+              <p class="muted">Shown special flair for development and performance in preparation of the report.</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -612,7 +597,6 @@
         Certifications
       </h2>
       <div class="w-24 h-1" style="background: linear-gradient(90deg,#00ffe1,#a400ff); margin: 0 auto 3.5rem;"></div>
-
       <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-6">
         <div class="card-3d gradient-border p-6 text-center muted">
           <i class="fas fa-certificate text-4xl" style="color:#a400ff"></i>
@@ -620,7 +604,6 @@
           <p class="text-sm muted mb-3">HackerRank</p>
           <p class="text-xs muted">Fundamental SQL queries and database operations</p>
         </div>
-
         <div class="card-3d gradient-border p-6 text-center muted">
           <i class="fas fa-certificate text-4xl" style="color:#ff007a"></i>
           <h3 class="font-bold mb-2 text-lg">Python Programming</h3>
@@ -643,9 +626,8 @@
         <div class="gradient-border p-8 card-3d">
           <h3 class="text-2xl font-bold mb-6" style="color:#00ffe1">Let's Connect!</h3>
           <p class="muted mb-8 leading-relaxed">
-            I'm actively seeking opportunities in data science, analytics and development. Reach out for collaborations, projects or to discuss data.
+            I'm actively seeking opportunities in software development, software engineer intern roles. Reach out for collaboration, projects or to discuss data.
           </p>
-
           <div class="space-y-4">
             <div class="flex items-center gap-4 p-4" style="background: rgba(0,255,225,0.02); border-radius:8px;">
               <i class="fas fa-envelope text-2xl" style="color:#00ffe1"></i>
@@ -654,7 +636,6 @@
                 <a href="mailto:hegdeamruta28@gmail.com" class="text-cyan-200">hegdeamruta28@gmail.com</a>
               </div>
             </div>
-
             <div class="flex items-center gap-4 p-4" style="background: rgba(164,0,255,0.02); border-radius:8px;">
               <i class="fas fa-phone text-2xl" style="color:#a400ff"></i>
               <div>
@@ -662,7 +643,6 @@
                 <span class="text-purple-200">+91 (available on request)</span>
               </div>
             </div>
-
             <div class="flex items-center gap-4 p-4" style="background: rgba(255,0,122,0.02); border-radius:8px;">
               <i class="fab fa-linkedin text-2xl" style="color:#ff007a"></i>
               <div>
@@ -670,7 +650,6 @@
                 <a href="https://linkedin.com/in/amruta-hegde-1972b5342" target="_blank" class="text-pink-200">linkedin.com/in/amruta-hegde-1972b5342</a>
               </div>
             </div>
-
             <div class="flex items-center gap-4 p-4" style="background: rgba(124,255,122,0.02); border-radius:8px;">
               <i class="fab fa-github text-2xl" style="color:#7cff7a"></i>
               <div>
@@ -678,7 +657,6 @@
                 <a href="https://github.com/amrutahere08" target="_blank" class="text-lime-200">github.com/amrutahere08</a>
               </div>
             </div>
-
             <div class="flex items-center gap-4 p-4" style="background: rgba(0,255,225,0.02); border-radius:8px;">
               <i class="fas fa-map-marker-alt text-2xl" style="color:#00ffe1"></i>
               <div>
@@ -688,7 +666,6 @@
             </div>
           </div>
         </div>
-
         <div class="gradient-border p-8 card-3d">
           <h3 class="text-2xl font-bold mb-6" style="color:#00ffe1">Send a Message</h3>
           <form id="contact-form" class="space-y-6">
@@ -696,17 +673,14 @@
               <label for="name" class="block text-sm font-medium mb-2 muted">Your Name</label>
               <input type="text" id="name" name="name" required class="w-full px-4 py-3 bg-[#05060b] border border-cyan-600/10 rounded-lg focus:outline-none focus:border-cyan-300 transition"/>
             </div>
-
             <div>
               <label for="email" class="block text-sm font-medium mb-2 muted">Your Email</label>
               <input type="email" id="email" name="email" required class="w-full px-4 py-3 bg-[#05060b] border border-cyan-600/10 rounded-lg focus:outline-none focus:border-cyan-300 transition"/>
             </div>
-
             <div>
               <label for="message" class="block text-sm font-medium mb-2 muted">Message</label>
               <textarea id="message" name="message" rows="5" required class="w-full px-4 py-3 bg-[#05060b] border border-cyan-600/10 rounded-lg focus:outline-none focus:border-cyan-300 transition resize-none"></textarea>
             </div>
-
             <button type="submit" class="w-full py-4 rounded-lg font-semibold" style="background: linear-gradient(90deg,#00ffe1,#a400ff); color:#010103;">
               Send Message
             </button>
@@ -735,7 +709,6 @@
   </footer>
 
   <script>
-    // Smooth scroll for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -747,8 +720,6 @@
         }
       });
     });
-
-    // Mobile Menu toggle
     const menuBtn = document.getElementById('menu-btn');
     if (menuBtn) {
       menuBtn.addEventListener('click', () => {
@@ -756,8 +727,6 @@
         if (m) m.classList.toggle('hidden');
       });
     }
-
-    // Fade-in on scroll using IntersectionObserver
     const fadeElements = document.querySelectorAll('.fade-in');
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
@@ -765,8 +734,6 @@
       });
     }, { threshold: 0.12 });
     fadeElements.forEach(el => observer.observe(el));
-
-    // Contact form opens mailto with Amruta's email
     const contactForm = document.getElementById('contact-form');
     if (contactForm) {
       contactForm.addEventListener('submit', function(e) {
@@ -774,11 +741,9 @@
         const name = document.getElementById('name').value.trim();
         const email = document.getElementById('email').value.trim();
         const message = document.getElementById('message').value.trim();
-
         const subject = encodeURIComponent(`Portfolio Contact from ${name || 'Website Visitor'}`);
         const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
         const mailtoLink = `mailto:hegdeamruta28@gmail.com?subject=${subject}&body=${body}`;
-
         window.location.href = mailtoLink;
         this.reset();
         setTimeout(()=> alert('Opening your email client to send the message to hegdeamruta28@gmail.com'), 200);
