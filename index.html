@@ -109,27 +109,10 @@
       border: 1px solid rgba(0,255,230,0.08);
     }
     .muted { color: #9fbacb; }
-
-    /* Small utility for project buttons */
-    .project-btn {
-      background: linear-gradient(90deg,#00ffe1,#a400ff);
-      color: #010103;
-      padding: 8px 12px;
-      border-radius: 999px;
-      font-weight: 600;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      text-decoration: none;
-      box-shadow: 0 8px 20px rgba(0,255,225,0.06);
-      transition: transform .12s ease, opacity .12s ease;
-    }
-    .project-btn:hover { transform: translateY(-3px); opacity: 0.95; }
-    .project-btn.secondary {
-      background: rgba(255,255,255,0.03);
-      color: #cfeff3;
-      border: 1px solid rgba(255,255,255,0.03);
-    }
+    /* small helper for project/resume buttons */
+    .control-row { display:flex; gap:0.75rem; justify-content:center; flex-wrap:wrap; }
+    .btn-secondary { background: transparent; border: 1px solid rgba(255,255,255,0.06); color: #e6f7ff; padding: 0.85rem 1.2rem; border-radius:999px; transition: all .18s ease; }
+    .btn-secondary:hover { transform: translateY(-4px); border-color: rgba(0,255,230,0.12); }
   </style>
 </head>
 <body class="dark-neon">
@@ -171,7 +154,8 @@
     <div class="text-center max-w-5xl">
       <div class="mb-8">
         <div class="w-40 h-40 mx-auto rounded-full p-1 profile-glow" style="background: radial-gradient(circle at 30% 20%, rgba(0,255,230,0.12), rgba(164,0,255,0.08));">
-          <img src="photo-Photoroom (1).png" alt="Amruta Hegde" class="w-full h-full rounded-full object-cover bg-[#06060a]" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+          <!-- Updated profile image - add the image file to repository at assets/profile.jpg -->
+          <img src="assets/profile.jpg" alt="Amruta Hegde" class="w-full h-full rounded-full object-cover bg-[#06060a]" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
           <div class="w-full h-full rounded-full bg-[#06060a] items-center justify-center text-6xl" style="display: none;">
             👩‍💻
           </div>
@@ -187,12 +171,18 @@
       <p class="text-lg md:text-xl mb-12 max-w-3xl mx-auto leading-relaxed">
         MCA student passionate about software development, software engineering, Data Analysis, Python, SQL and hands-on with AI/ML projects.
       </p>
-      <div class="flex gap-4 justify-center flex-wrap">
+      <div class="control-row">
         <a href="#contact" class="px-8 py-4 neon-btn rounded-full font-semibold transition transform hover:scale-105" style="background: linear-gradient(90deg,#00ffe1,#a400ff); color:#010103; box-shadow: 0 10px 30px rgba(0,255,225,0.08);">
           Get In Touch
         </a>
+
         <a href="#projects" class="px-8 py-4 border-2 border-cyan-500 rounded-full font-semibold hover:bg-cyan-500/6 transition">
           View Projects
+        </a>
+
+        <!-- New Resume button - make sure the PDF file Amruta_Hegde_CV.pdf exists at repo root -->
+        <a href="/Amruta_Hegde_CV.pdf" target="_blank" rel="noopener noreferrer" class="px-8 py-4 btn-secondary rounded-full font-semibold">
+          View Resume
         </a>
       </div>
     </div>
@@ -482,16 +472,11 @@
             <span class="px-3 py-1 rounded-full text-sm" style="background: rgba(0,255,225,0.06); color:#00ffe1;">Web App</span>
             <span class="px-3 py-1 rounded-full text-sm" style="background: rgba(164,0,255,0.06); color:#a400ff;">Full Stack Development</span>
           </div>
-
-          <!-- Added GitHub link button -->
-          <div class="flex gap-3 mb-4">
-            <a href="https://github.com/amrutahere08/Online-Intelligent-Tourist-System" target="_blank" rel="noopener" class="project-btn">
-              <i class="fab fa-github"></i>
-              View on GitHub
-            </a>
+          <div class="text-sm muted mb-4">Published: July 2024</div>
+          <div class="flex gap-3">
+            <a href="https://github.com/amrutahere08/Online-Intelligent-Tourist-System" target="_blank" rel="noopener noreferrer" class="btn-secondary">View Project</a>
+            <!-- optional live/demo link could be added here -->
           </div>
-
-          <div class="text-sm muted">Published: July 2024</div>
         </div>
 
         <!-- IPL Match Outcome Prediction -->
@@ -508,16 +493,10 @@
             <span class="px-3 py-1 rounded-full text-sm" style="background: rgba(164,0,255,0.06); color:#a400ff;">Sports Analytics</span>
             <span class="px-3 py-1 rounded-full text-sm" style="background: rgba(255,0,122,0.06); color:#ff007a;">Ensemble Models</span>
           </div>
-
-          <!-- Added GitHub link button -->
-          <div class="flex gap-3 mb-4">
-            <a href="https://github.com/amrutahere08/IPLAnalysis" target="_blank" rel="noopener" class="project-btn">
-              <i class="fab fa-github"></i>
-              View on GitHub
-            </a>
+          <div class="text-sm muted mb-4">Published: June 2025</div>
+          <div class="flex gap-3">
+            <a href="https://github.com/amrutahere08/IPLAnalysis" target="_blank" rel="noopener noreferrer" class="btn-secondary">View Project</a>
           </div>
-
-          <div class="text-sm muted">Published: June 2025</div>
         </div>
 
         <!-- AgroTracking -->
@@ -534,16 +513,10 @@
             <span class="px-3 py-1 rounded-full text-sm" style="background: rgba(164,0,255,0.06); color:#a400ff;">Data Viz</span>
             <span class="px-3 py-1 rounded-full text-sm" style="background: rgba(255,0,122,0.06); color:#ff007a;">Supply Chain</span>
           </div>
-
-          <!-- Added GitHub link button (used provided repo URL) -->
-          <div class="flex gap-3 mb-4">
-            <a href="https://github.com/amrutahere08/AgroTracking" target="_blank" rel="noopener" class="project-btn">
-              <i class="fab fa-github"></i>
-              View on GitHub
-            </a>
+          <div class="text-sm muted mb-4">Published: July 2025</div>
+          <div class="flex gap-3">
+            <a href="https://github.com/amrutahere08/AgroTracking" target="_blank" rel="noopener noreferrer" class="btn-secondary">View Project</a>
           </div>
-
-          <div class="text-sm muted">Published: July 2025</div>
         </div>
 
         <!-- Climate Change and Disaster Impact Analysis -->
@@ -560,16 +533,10 @@
             <span class="px-3 py-1 rounded-full text-sm" style="background: rgba(164,0,255,0.06); color:#a400ff;">Climate Analytics</span>
             <span class="px-3 py-1 rounded-full text-sm" style="background: rgba(255,0,122,0.06); color:#ff007a;">Impact Study</span>
           </div>
-
-          <!-- Added GitHub link button -->
-          <div class="flex gap-3 mb-4">
-            <a href="https://github.com/amrutahere08/Climate-Change-Analysis" target="_blank" rel="noopener" class="project-btn">
-              <i class="fab fa-github"></i>
-              View on GitHub
-            </a>
+          <div class="text-sm muted mb-4">Published: June 2025</div>
+          <div class="flex gap-3">
+            <a href="https://github.com/amrutahere08/Climate-Change-Analysis" target="_blank" rel="noopener noreferrer" class="btn-secondary">View Project</a>
           </div>
-
-          <div class="text-sm muted">Published: June 2025</div>
         </div>
       </div>
     </div>
@@ -605,17 +572,35 @@
             </div>
           </div>
         </div>
+
+        <!-- SVARKS Experience with certificate image and button -->
         <div class="card-3d gradient-border p-6">
           <div class="flex items-start gap-4">
-            <div class="text-4xl">💼</div>
+            <div style="width:84px;flex-shrink:0;">
+              <!-- svarks image - add file at assets/svarks-certificate.jpg -->
+              <img src="assets/svarks-certificate-thumb.jpg" alt="Svarks Internship Certificate Thumbnail" class="w-20 h-20 object-cover rounded-md" onerror="this.style.display='none'">
+            </div>
             <div class="flex-1">
               <h3 class="text-2xl font-bold mb-2">SVARKS Information Technology LLP</h3>
               <div style="color:#00ffe1" class="mb-2">Full Stack Development Intern</div>
               <div class="muted mb-4">April 2024 - June 2024 | Completed 245 hours</div>
               <p class="muted">Completed 245 hours of work as a full stack development intern. Demonstrated a special flair for development and performance in the preparation of the report. Graded 8/10 for quality and achievement.</p>
+
+              <div class="mt-4 flex gap-3">
+                <!-- View Certificate button opens full certificate image in new tab -->
+                <a href="assets/svarks-certificate.jpg" target="_blank" rel="noopener noreferrer" class="px-4 py-2 btn-secondary rounded-full">
+                  <i class="fas fa-file-alt mr-2"></i>View Certificate
+                </a>
+
+                <!-- optional link to company page if needed -->
+                <a href="https://www.svarks.com" target="_blank" rel="noopener noreferrer" class="px-4 py-2 btn-secondary rounded-full">
+                  Company Website
+                </a>
+              </div>
             </div>
           </div>
         </div>
+
       </div>
     </div>
   </section>
