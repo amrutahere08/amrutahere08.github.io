@@ -109,6 +109,27 @@
       border: 1px solid rgba(0,255,230,0.08);
     }
     .muted { color: #9fbacb; }
+
+    /* Small utility for project buttons */
+    .project-btn {
+      background: linear-gradient(90deg,#00ffe1,#a400ff);
+      color: #010103;
+      padding: 8px 12px;
+      border-radius: 999px;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+      box-shadow: 0 8px 20px rgba(0,255,225,0.06);
+      transition: transform .12s ease, opacity .12s ease;
+    }
+    .project-btn:hover { transform: translateY(-3px); opacity: 0.95; }
+    .project-btn.secondary {
+      background: rgba(255,255,255,0.03);
+      color: #cfeff3;
+      border: 1px solid rgba(255,255,255,0.03);
+    }
   </style>
 </head>
 <body class="dark-neon">
@@ -461,6 +482,15 @@
             <span class="px-3 py-1 rounded-full text-sm" style="background: rgba(0,255,225,0.06); color:#00ffe1;">Web App</span>
             <span class="px-3 py-1 rounded-full text-sm" style="background: rgba(164,0,255,0.06); color:#a400ff;">Full Stack Development</span>
           </div>
+
+          <!-- Added GitHub link button -->
+          <div class="flex gap-3 mb-4">
+            <a href="https://github.com/amrutahere08/Online-Intelligent-Tourist-System" target="_blank" rel="noopener" class="project-btn">
+              <i class="fab fa-github"></i>
+              View on GitHub
+            </a>
+          </div>
+
           <div class="text-sm muted">Published: July 2024</div>
         </div>
 
@@ -478,6 +508,15 @@
             <span class="px-3 py-1 rounded-full text-sm" style="background: rgba(164,0,255,0.06); color:#a400ff;">Sports Analytics</span>
             <span class="px-3 py-1 rounded-full text-sm" style="background: rgba(255,0,122,0.06); color:#ff007a;">Ensemble Models</span>
           </div>
+
+          <!-- Added GitHub link button -->
+          <div class="flex gap-3 mb-4">
+            <a href="https://github.com/amrutahere08/IPLAnalysis" target="_blank" rel="noopener" class="project-btn">
+              <i class="fab fa-github"></i>
+              View on GitHub
+            </a>
+          </div>
+
           <div class="text-sm muted">Published: June 2025</div>
         </div>
 
@@ -495,6 +534,15 @@
             <span class="px-3 py-1 rounded-full text-sm" style="background: rgba(164,0,255,0.06); color:#a400ff;">Data Viz</span>
             <span class="px-3 py-1 rounded-full text-sm" style="background: rgba(255,0,122,0.06); color:#ff007a;">Supply Chain</span>
           </div>
+
+          <!-- Added GitHub link button (used provided repo URL) -->
+          <div class="flex gap-3 mb-4">
+            <a href="https://github.com/amrutahere08/AgroTracking" target="_blank" rel="noopener" class="project-btn">
+              <i class="fab fa-github"></i>
+              View on GitHub
+            </a>
+          </div>
+
           <div class="text-sm muted">Published: July 2025</div>
         </div>
 
@@ -512,6 +560,15 @@
             <span class="px-3 py-1 rounded-full text-sm" style="background: rgba(164,0,255,0.06); color:#a400ff;">Climate Analytics</span>
             <span class="px-3 py-1 rounded-full text-sm" style="background: rgba(255,0,122,0.06); color:#ff007a;">Impact Study</span>
           </div>
+
+          <!-- Added GitHub link button -->
+          <div class="flex gap-3 mb-4">
+            <a href="https://github.com/amrutahere08/Climate-Change-Analysis" target="_blank" rel="noopener" class="project-btn">
+              <i class="fab fa-github"></i>
+              View on GitHub
+            </a>
+          </div>
+
           <div class="text-sm muted">Published: June 2025</div>
         </div>
       </div>
