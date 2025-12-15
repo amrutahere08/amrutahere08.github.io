@@ -11,6 +11,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+        @import url('https://fonts.cdnfonts.com/css/chocolate-adventure');
 
         .typing-cursor::after {
             content: '|';
@@ -28,6 +29,11 @@
             padding: 0;
             box-sizing: border-box;
             font-family: 'Poppins', sans-serif;
+        }
+
+        html {
+            overflow-y: scroll;
+            /* Force scrollbar to prevent layout shift */
         }
 
         body {
@@ -58,8 +64,6 @@
             text-decoration: none;
             font-weight: 600;
             cursor: pointer;
-            opacity: 0;
-            animation: slideRight 1s ease forwards;
         }
 
         .navbar a {
@@ -70,9 +74,6 @@
             font-weight: 500;
             margin-left: 35px;
             transition: .3s;
-            opacity: 0;
-            animation: slideTop .5s ease forwards;
-            animation-delay: calc(.2s * var(--i));
         }
 
         .navbar a:hover {
@@ -91,7 +92,7 @@
             display: flex;
             align-items: center;
             padding: 70px 10% 0;
-            overflow: hidden;
+            /* overflow: hidden; removed to allow scroll on selection */
             /* Added to keep animations contained */
         }
 
@@ -102,15 +103,12 @@
         .home-content h3 {
             font-size: 32px;
             font-weight: 700;
-            opacity: 0;
-            animation: slideBottom 1s ease forwards;
-            animation-delay: .7s;
         }
 
         .home-content h3:nth-of-type(2) {
             margin-bottom: 30px;
-            animation: slideTop 1s ease forwards;
-            animation-delay: .7s;
+            font-size: 20px;
+            color: #00ffe1;
         }
 
         .home-content h3 span {
@@ -121,16 +119,10 @@
             font-size: 56px;
             font-weight: 700;
             margin: -3px 0;
-            opacity: 0;
-            animation: slideRight 1s ease forwards;
-            animation-delay: 1s;
         }
 
         .home-content p {
             font-size: 16px;
-            opacity: 0;
-            animation: slideLeft 1s ease forwards;
-            animation-delay: 1s;
         }
 
         .social-media {
@@ -152,9 +144,6 @@
             text-decoration: none;
             margin-right: 15px;
             transition: .5s ease;
-            opacity: 0;
-            animation: slideLeft 1s ease forwards;
-            animation-delay: 1s;
         }
 
         .social-media a:hover {
@@ -174,9 +163,6 @@
             letter-spacing: 1px;
             text-decoration: none;
             font-weight: 600;
-            opacity: 0;
-            animation: slideTop 1s ease forwards;
-            animation-delay: 2s;
         }
 
         .btn:hover {
@@ -188,9 +174,6 @@
             width: 410px;
             height: 410px;
             margin-top: -80px;
-            opacity: 0;
-            animation: zoomIn 1s ease forwards;
-            animation-delay: 2s;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -433,8 +416,8 @@
     <!-- Home Section -->
     <section id="home">
         <div class="home-content">
-            <h3 id="type-1" class="typing-cursor" style="min-height: 48px;"></h3>
-            <h1 id="type-2" class="typing-cursor" style="min-height: 84px;"></h1>
+            <h3 id="type-1" style="min-height: 48px;"></h3>
+            <h1 id="type-2" style="min-height: 84px;"></h1>
             <h3>Aspiring Software Developer / Software Engineer <br> Learning & Building</h3>
             <p>MCA student passionate about software development, software engineering, Python, SQL and hands-on with
                 AI/ML projects.</p>
@@ -476,50 +459,135 @@
                 <div class="gradient-border p-8 card-3d">
                     <h3 class="text-2xl font-bold mb-4" style="color:#00ffe1">Background</h3>
                     <p class="muted leading-relaxed mb-4">
-                        I'm currently pursuing my Master of Computer Applications with a specialization in Data Science
-                        at Chanakya University, Bengaluru, maintaining a CGPA of 8.48.
+                        I am a Master of Computer Applications (MCA) student at Chanakya University, Bengaluru, with a
+                        academic background and practical exposure to software development and data-driven projects.
+                        Through academic work and internships, I have contributed to the development of intelligent
+                        applications, full-stack systems, and analytical solutions.
                     </p>
                     <p class="muted leading-relaxed mb-4">
-                        Skilled in Python, Java, SQL, Power BI, and Tableau, with hands-on experience in machine
-                        learning, exploratory data analysis (EDA), and data visualization. Currently learning real-time
-                        analytics and stream processing using Kafka.
+                        I have a solid foundation in Python, Java, and SQL, along with hands-on experience in machine
+                        learning, exploratory data analysis (EDA), and data visualization using tools such as Power BI
+                        and Tableau. My project experience includes building end-to-end applications, working with
+                        databases and APIs, and applying analytical techniques to derive meaningful insights.
+                    </p>
+                    <p class="muted leading-relaxed mb-4">
+                        I continuously work on strengthening my technical skills by exploring modern development
+                        practices and data-oriented approaches. I enjoy learning new technologies and applying them to
+                        practical scenarios to create efficient and scalable software solutions.
                     </p>
                     <p class="muted leading-relaxed">
-                        Actively looking for roles in software development and data-driven engineering. Always open to
-                        collaborating on real-world projects and innovative tech ideas.
+                        I am actively seeking opportunities in software development, full-stack development, or software
+                        engineering roles, where I can contribute to building reliable, user-focused solutions while
+                        growing professionally.
                     </p>
                 </div>
 
                 <div class="gradient-border p-8 card-3d">
                     <h3 class="text-2xl font-bold mb-6" style="color:#00ffe1">Quick Facts</h3>
-                    <div class="space-y-4">
-                        <div class="flex items-center gap-3">
-                            <i class="fas fa-graduation-cap text-2xl" style="color:#a400ff"></i>
+                    <div class="space-y-6">
+                        <!-- Fact 1 -->
+                        <div class="flex items-start gap-5">
+                            <div class="w-12 flex justify-center shrink-0">
+                                <i class="fas fa-graduation-cap text-2xl mt-1" style="color:#a400ff"></i>
+                            </div>
                             <div>
-                                <div class="font-semibold">Current CGPA</div>
-                                <div style="color:#00ffe1">8.48 (MCA)</div>
+                                <div class="font-semibold text-gray-400 uppercase text-xs tracking-widest mb-1">Current
+                                    CGPA</div>
+                                <div class="font-medium text-lg leading-tight" style="color:#00ffe1">8.48 (MCA)</div>
                             </div>
                         </div>
-                        <div class="flex items-center gap-3">
-                            <i class="fas fa-map-marker-alt text-2xl" style="color:#a400ff"></i>
+
+                        <!-- Fact 2 -->
+                        <div class="flex items-start gap-5">
+                            <div class="w-12 flex justify-center shrink-0">
+                                <i class="fas fa-map-marker-alt text-2xl mt-1" style="color:#a400ff"></i>
+                            </div>
                             <div>
-                                <div class="font-semibold">Location</div>
-                                <div style="color:#00ffe1">Bengaluru, India</div>
+                                <div class="font-semibold text-gray-400 uppercase text-xs tracking-widest mb-1">
+                                    Location</div>
+                                <div class="font-medium text-lg leading-tight" style="color:#00ffe1">Bengaluru, India
+                                </div>
                             </div>
                         </div>
-                        <div class="flex items-center gap-3">
-                            <i class="fas fa-language text-2xl" style="color:#a400ff"></i>
+
+                        <!-- Fact 3 -->
+                        <div class="flex items-start gap-5">
+                            <div class="w-12 flex justify-center shrink-0">
+                                <i class="fas fa-language text-2xl mt-1" style="color:#a400ff"></i>
+                            </div>
                             <div>
-                                <div class="font-semibold">Languages</div>
-                                <div style="color:#00ffe1">English (Fluent), Kannada (Advanced)</div>
+                                <div class="font-semibold text-gray-400 uppercase text-xs tracking-widest mb-1">
+                                    Languages</div>
+                                <div class="font-medium text-lg leading-tight" style="color:#00ffe1">English (Fluent),
+                                    Kannada
+                                    (Advanced)</div>
                             </div>
                         </div>
-                        <div class="flex items-center gap-3">
-                            <i class="fas fa-lightbulb text-2xl" style="color:#a400ff"></i>
+
+                        <!-- Fact 4 -->
+                        <div class="flex items-start gap-5">
+                            <div class="w-12 flex justify-center shrink-0">
+                                <i class="fas fa-lightbulb text-2xl mt-1" style="color:#a400ff"></i>
+                            </div>
                             <div>
-                                <div class="font-semibold">Interests</div>
-                                <div style="color:#00ffe1">Software Development, AI/ML, Real-Time Analytics, Data
-                                    Visualization & Storytelling</div>
+                                <div class="font-semibold text-gray-400 uppercase text-xs tracking-widest mb-1">
+                                    Interests</div>
+                                <div class="font-medium leading-relaxed" style="color:#00ffe1">Software Development,
+                                    AI/ML, Full-stack Development, Software Engineering, Data Visualization &
+                                    Storytelling</div>
+                            </div>
+                        </div>
+
+                        <!-- Fact 5 (New Filler) -->
+                        <div class="flex items-start gap-5">
+                            <div class="w-12 flex justify-center shrink-0">
+                                <i class="fas fa-users text-2xl mt-1" style="color:#a400ff"></i>
+                            </div>
+                            <div>
+                                <div class="font-semibold text-gray-400 uppercase text-xs tracking-widest mb-1">
+                                    Soft Skills</div>
+                                <div class="font-medium text-lg leading-tight" style="color:#00ffe1">Problem Solving,
+                                    Team
+                                    Collaboration, Adaptability, Decision Making, Detail Oriented</div>
+                            </div>
+                        </div>
+
+                        <!-- Fact 6 -->
+                        <div class="flex items-start gap-5">
+                            <div class="w-12 flex justify-center shrink-0">
+                                <i class="fas fa-user-tie text-2xl mt-1" style="color:#a400ff"></i>
+                            </div>
+                            <div>
+                                <div class="font-semibold text-gray-400 uppercase text-xs tracking-widest mb-1">
+                                    Preferred Roles</div>
+                                <div class="font-medium text-lg leading-tight" style="color:#00ffe1">Software Developer,
+                                    Full-stack developer, Software Engineer, Data Analytics</div>
+                            </div>
+                        </div>
+
+                        <!-- Fact 7 -->
+                        <div class="flex items-start gap-5">
+                            <div class="w-12 flex justify-center shrink-0">
+                                <i class="fas fa-building text-2xl mt-1" style="color:#a400ff"></i>
+                            </div>
+                            <div>
+                                <div class="font-semibold text-gray-400 uppercase text-xs tracking-widest mb-1">
+                                    Work Preference</div>
+                                <div class="font-medium text-lg leading-tight" style="color:#00ffe1">Open to Remote /
+                                    Hybrid / On-site</div>
+                            </div>
+                        </div>
+
+                        <!-- Fact 8 -->
+                        <div class="flex items-start gap-5">
+                            <div class="w-12 flex justify-center shrink-0">
+                                <i class="fas fa-camera text-2xl mt-1" style="color:#a400ff"></i>
+                            </div>
+                            <div>
+                                <div class="font-semibold text-gray-400 uppercase text-xs tracking-widest mb-1">
+                                    Hobbies</div>
+                                <div class="font-medium text-lg leading-tight" style="color:#00ffe1">Photography,
+                                    Videography, Editing, Drawing/Painting, Playing Badminton</div>
                             </div>
                         </div>
                     </div>
@@ -651,7 +719,7 @@
         <div class="max-w-6xl mx-auto">
             <h2 class="text-4xl md:text-5xl font-bold text-center mb-4"
                 style="background: linear-gradient(90deg,#00ffe1,#a400ff); -webkit-background-clip:text; color:transparent;">
-                Research & Projects
+                Projects & Academic Works
             </h2>
             <div class="w-24 h-1" style="background: linear-gradient(90deg,#00ffe1,#a400ff); margin: 0 auto 3.5rem;">
             </div>
@@ -679,8 +747,8 @@
                     <!-- Repo button added -->
                     <div class="mt-4">
                         <a class="btn" href="https://github.com/amrutahere08/Online-Intelligent-Tourist-System.git"
-                            target="_blank" rel="noopener noreferrer" style="padding: 10px 20px; font-size: 14px;">
-                            View
+                            target="_blank" rel="noopener noreferrer" style="padding: 6px 12px; font-size: 13px;">
+                            <i class="fab fa-github mr-2"></i>View
                         </a>
                     </div>
                 </div>
@@ -709,8 +777,8 @@
                     <!-- Repo button added -->
                     <div class="mt-4">
                         <a class="btn" href="https://github.com/amrutahere08/IPLAnalysis.git" target="_blank"
-                            rel="noopener noreferrer" style="padding: 10px 20px; font-size: 14px;">
-                            View
+                            rel="noopener noreferrer" style="padding: 6px 12px; font-size: 13px;">
+                            <i class="fab fa-github mr-2"></i>View
                         </a>
                     </div>
                 </div>
@@ -739,8 +807,8 @@
                     <!-- Repo button added -->
                     <div class="mt-4">
                         <a class="btn" href="https://github.com/amrutahere08/AgroTracking.git" target="_blank"
-                            rel="noopener noreferrer" style="padding: 10px 20px; font-size: 14px;">
-                            View
+                            rel="noopener noreferrer" style="padding: 6px 12px; font-size: 13px;">
+                            <i class="fab fa-github mr-2"></i>View
                         </a>
                     </div>
                 </div>
@@ -769,8 +837,8 @@
                     <!-- Repo button added -->
                     <div class="mt-4">
                         <a class="btn" href="https://github.com/amrutahere08/Climate-Change-Analysis.git"
-                            target="_blank" rel="noopener noreferrer" style="padding: 10px 20px; font-size: 14px;">
-                            View
+                            target="_blank" rel="noopener noreferrer" style="padding: 6px 12px; font-size: 13px;">
+                            <i class="fab fa-github mr-2"></i>View
                         </a>
                     </div>
                 </div>
@@ -844,9 +912,10 @@
                     <div class="flex items-start gap-4">
                         <div class="text-4xl">💼</div>
                         <div class="flex-1">
-                            <h3 class="text-2xl font-bold mb-2">SVARKS Information Technology LLP</h3>
-                            <div style="color:#00ffe1" class="mb-2">Full Stack Development Intern</div>
-                            <div class="muted mb-4">April 2024 - June 2024 | Completed 245 hours</div>
+                            <h3 class="text-2xl font-bold mb-2">Full Stack Development Intern</h3>
+                            <div style="color:#00ffe1" class="mb-2">SVARKS Information Technology LLP - Bengaluru, India
+                            </div>
+                            <div class="muted mb-4">April 2024 - June 2024</div>
                             <p class="muted mb-4">Completed 245 hours of work as a full stack development intern.
                                 Demonstrated a special flair for development and performance in the preparation of the
                                 report. Graded 8/10 for quality and achievement.</p>
@@ -873,18 +942,26 @@
             <div class="w-24 h-1" style="background: linear-gradient(90deg,#00ffe1,#a400ff); margin: 0 auto 3.5rem;">
             </div>
             <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-6">
-                <div class="card-3d gradient-border p-6 text-center muted">
-                    <i class="fas fa-certificate text-4xl" style="color:#a400ff"></i>
-                    <h3 class="font-bold mb-2 text-lg">Basic SQL</h3>
-                    <p class="text-sm muted mb-3">HackerRank</p>
-                    <p class="text-xs muted">Fundamental SQL queries and database operations</p>
-                </div>
-                <div class="card-3d gradient-border p-6 text-center muted">
-                    <i class="fas fa-certificate text-4xl" style="color:#ff007a"></i>
-                    <h3 class="font-bold mb-2 text-lg">Python Programming</h3>
-                    <p class="text-sm muted mb-3">HackerRank</p>
-                    <p class="text-xs muted">Core Python programming concepts and applications</p>
-                </div>
+                <a href="https://www.hackerrank.com/certificates/e645c4239e40" target="_blank" class="no-underline">
+                    <div
+                        class="card-3d gradient-border p-6 text-center muted hover:scale-105 transition-transform relative">
+                        <i class="fas fa-external-link-alt absolute top-3 right-3 text-sm opacity-70"></i>
+                        <i class="fas fa-certificate text-4xl" style="color:#a400ff"></i>
+                        <h3 class="font-bold mb-2 text-lg">Basic SQL</h3>
+                        <p class="text-sm muted mb-3">HackerRank</p>
+                        <p class="text-xs muted">Fundamental SQL queries and database operations</p>
+                    </div>
+                </a>
+                <a href="https://www.hackerrank.com/certificates/3f54d681fc66" target="_blank" class="no-underline">
+                    <div
+                        class="card-3d gradient-border p-6 text-center muted hover:scale-105 transition-transform relative">
+                        <i class="fas fa-external-link-alt absolute top-3 right-3 text-sm opacity-70"></i>
+                        <i class="fas fa-certificate text-4xl" style="color:#ff007a"></i>
+                        <h3 class="font-bold mb-2 text-lg">Python Programming</h3>
+                        <p class="text-sm muted mb-3">HackerRank</p>
+                        <p class="text-xs muted">Core Python programming concepts and applications</p>
+                    </div>
+                </a>
             </div>
         </div>
     </section>
@@ -1035,7 +1112,8 @@
             const element = document.getElementById(elementId);
             if (!element) return;
 
-            element.classList.add('typing-cursor'); // Ensure cursor is there
+            element.classList.add('typing-cursor');
+            element.textContent = ''; // Ensure clear before typing
 
             function type() {
                 if (i < text.length) {
@@ -1043,23 +1121,63 @@
                     i++;
                     setTimeout(type, speed);
                 } else {
-                    element.classList.remove('typing-cursor'); // Remove cursor after typing
+                    element.classList.remove('typing-cursor');
                     if (callback) callback();
                 }
             }
             type();
         }
 
+        function deleteWriter(elementId, speed, callback) {
+            const element = document.getElementById(elementId);
+            if (!element) return;
+
+            element.classList.add('typing-cursor');
+            let text = element.textContent;
+
+            function erase() {
+                if (text.length > 0) {
+                    text = text.substring(0, text.length - 1);
+                    element.textContent = text;
+                    setTimeout(erase, speed);
+                } else {
+                    element.classList.remove('typing-cursor');
+                    if (callback) callback();
+                }
+            }
+            erase();
+        }
+
         // Start typing on load
         window.addEventListener('load', () => {
-            // Typing "Hello, It's Me"
-            typeWriter('type-1', "Hello, It's Me", 100, () => {
-                // Then "Amruta Hegde"
-                // Add cursor to next element
-                document.getElementById('type-2').classList.add('typing-cursor');
-                typeWriter('type-2', "Amruta Hegde", 100, null);
-            });
+            startTypingLoop();
         });
+
+        function startTypingLoop() {
+            // Explicit cleanup
+            const t1 = document.getElementById('type-1');
+            const t2 = document.getElementById('type-2');
+            if (t1) { t1.textContent = ''; t1.classList.remove('typing-cursor'); }
+            if (t2) { t2.textContent = ''; t2.classList.remove('typing-cursor'); }
+
+            // Type Line 1
+            typeWriter('type-1', "Hello, It's Me", 100, () => {
+                // Type Line 2
+                typeWriter('type-2', "Amruta Hegde", 100, () => {
+                    // Wait then delete backwards
+                    setTimeout(() => {
+                        // Delete Line 2 first
+                        deleteWriter('type-2', 50, () => {
+                            // Delete Line 1
+                            deleteWriter('type-1', 50, () => {
+                                // Restart loop
+                                setTimeout(startTypingLoop, 500);
+                            });
+                        });
+                    }, 1500); // Reduced gap
+                });
+            });
+        }
 
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
