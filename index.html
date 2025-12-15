@@ -36,6 +36,25 @@
             /* Force scrollbar to prevent layout shift */
         }
 
+        .gradient-text {
+            background: linear-gradient(90deg, #00ffe1, #a400ff);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            display: inline-block;
+        }
+
+        .skill-box {
+            background: linear-gradient(90deg, rgba(0, 255, 225, 0.2), rgba(164, 0, 255, 0.2));
+            color: #fff;
+            padding: 5px 12px;
+            border-radius: 6px;
+            font-weight: 500;
+            font-size: 0.9rem;
+            display: inline-block;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
         body {
             background: #1f242d;
             color: #fff;
@@ -417,8 +436,8 @@
     <section id="home">
         <div class="home-content">
             <h3 id="type-1" style="min-height: 48px;"></h3>
-            <h1 id="type-2" style="min-height: 84px;"></h1>
-            <h3>Aspiring Software Developer / Software Engineer <br> Learning & Building</h3>
+            <h1 id="type-2" class="gradient-text" style="min-height: 84px;"></h1>
+            <h3 style="color: #fff;">Aspiring Software Developer / Software Engineer <br> Learning & Building</h3>
             <p>MCA student passionate about software development, software engineering, Python, SQL and hands-on with
                 AI/ML projects.</p>
             <div class="social-media">
@@ -490,9 +509,10 @@
                                 <i class="fas fa-graduation-cap text-2xl mt-1" style="color:#a400ff"></i>
                             </div>
                             <div>
-                                <div class="font-semibold text-gray-400 uppercase text-xs tracking-widest mb-1">Current
+                                <div class="font-semibold uppercase text-xs tracking-widest mb-1" style="color:#00ffe1">
+                                    Current
                                     CGPA</div>
-                                <div class="font-medium text-lg leading-tight" style="color:#00ffe1">8.48 (MCA)</div>
+                                <div class="font-medium text-lg leading-tight" style="color:#fff">8.48 (MCA)</div>
                             </div>
                         </div>
 
@@ -502,9 +522,9 @@
                                 <i class="fas fa-map-marker-alt text-2xl mt-1" style="color:#a400ff"></i>
                             </div>
                             <div>
-                                <div class="font-semibold text-gray-400 uppercase text-xs tracking-widest mb-1">
+                                <div class="font-semibold uppercase text-xs tracking-widest mb-1" style="color:#00ffe1">
                                     Location</div>
-                                <div class="font-medium text-lg leading-tight" style="color:#00ffe1">Bengaluru, India
+                                <div class="font-medium text-lg leading-tight" style="color:#fff">Bengaluru, India
                                 </div>
                             </div>
                         </div>
@@ -515,9 +535,9 @@
                                 <i class="fas fa-language text-2xl mt-1" style="color:#a400ff"></i>
                             </div>
                             <div>
-                                <div class="font-semibold text-gray-400 uppercase text-xs tracking-widest mb-1">
+                                <div class="font-semibold uppercase text-xs tracking-widest mb-1" style="color:#00ffe1">
                                     Languages</div>
-                                <div class="font-medium text-lg leading-tight" style="color:#00ffe1">English (Fluent),
+                                <div class="font-medium text-lg leading-tight" style="color:#fff">English (Fluent),
                                     Kannada
                                     (Advanced)</div>
                             </div>
@@ -529,9 +549,9 @@
                                 <i class="fas fa-lightbulb text-2xl mt-1" style="color:#a400ff"></i>
                             </div>
                             <div>
-                                <div class="font-semibold text-gray-400 uppercase text-xs tracking-widest mb-1">
+                                <div class="font-semibold uppercase text-xs tracking-widest mb-1" style="color:#00ffe1">
                                     Interests</div>
-                                <div class="font-medium leading-relaxed" style="color:#00ffe1">Software Development,
+                                <div class="font-medium leading-relaxed" style="color:#fff">Software Development,
                                     AI/ML, Full-stack Development, Software Engineering, Data Visualization &
                                     Storytelling</div>
                             </div>
@@ -543,9 +563,9 @@
                                 <i class="fas fa-users text-2xl mt-1" style="color:#a400ff"></i>
                             </div>
                             <div>
-                                <div class="font-semibold text-gray-400 uppercase text-xs tracking-widest mb-1">
+                                <div class="font-semibold uppercase text-xs tracking-widest mb-1" style="color:#00ffe1">
                                     Soft Skills</div>
-                                <div class="font-medium text-lg leading-tight" style="color:#00ffe1">Problem Solving,
+                                <div class="font-medium text-lg leading-tight" style="color:#fff">Problem Solving,
                                     Team
                                     Collaboration, Adaptability, Decision Making, Detail Oriented</div>
                             </div>
@@ -557,9 +577,9 @@
                                 <i class="fas fa-user-tie text-2xl mt-1" style="color:#a400ff"></i>
                             </div>
                             <div>
-                                <div class="font-semibold text-gray-400 uppercase text-xs tracking-widest mb-1">
+                                <div class="font-semibold uppercase text-xs tracking-widest mb-1" style="color:#00ffe1">
                                     Preferred Roles</div>
-                                <div class="font-medium text-lg leading-tight" style="color:#00ffe1">Software Developer,
+                                <div class="font-medium text-lg leading-tight" style="color:#fff">Software Developer,
                                     Full-stack developer, Software Engineer, Data Analytics</div>
                             </div>
                         </div>
@@ -570,9 +590,9 @@
                                 <i class="fas fa-building text-2xl mt-1" style="color:#a400ff"></i>
                             </div>
                             <div>
-                                <div class="font-semibold text-gray-400 uppercase text-xs tracking-widest mb-1">
+                                <div class="font-semibold uppercase text-xs tracking-widest mb-1" style="color:#00ffe1">
                                     Work Preference</div>
-                                <div class="font-medium text-lg leading-tight" style="color:#00ffe1">Open to Remote /
+                                <div class="font-medium text-lg leading-tight" style="color:#fff">Open to Remote /
                                     Hybrid / On-site</div>
                             </div>
                         </div>
@@ -583,9 +603,9 @@
                                 <i class="fas fa-camera text-2xl mt-1" style="color:#a400ff"></i>
                             </div>
                             <div>
-                                <div class="font-semibold text-gray-400 uppercase text-xs tracking-widest mb-1">
+                                <div class="font-semibold uppercase text-xs tracking-widest mb-1" style="color:#00ffe1">
                                     Hobbies</div>
-                                <div class="font-medium text-lg leading-tight" style="color:#00ffe1">Photography,
+                                <div class="font-medium text-lg leading-tight" style="color:#fff">Photography,
                                     Videography, Editing, Drawing/Painting, Playing Badminton</div>
                             </div>
                         </div>
@@ -609,20 +629,15 @@
                 <!-- Programming Languages -->
                 <div class="card-3d gradient-border p-6">
                     <div class="flex items-center gap-3 mb-6">
-                        <i class="fas fa-code text-3xl" style="color:#00ffe1"></i>
-                        <h3 class="text-xl font-bold">Programming Languages</h3>
+                        <i class="fas fa-code text-3xl" style="color:#a400ff"></i>
+                        <h3 class="text-xl font-bold" style="color:#00ffe1">Programming Languages</h3>
                     </div>
                     <div class="flex flex-wrap gap-2">
-                        <span class="skill-box"
-                            style="border: 1px solid #00ffe1; color: #00ffe1; padding: 5px 12px; border-radius: 6px; font-weight: 500; font-size: 0.9rem;">Python</span>
-                        <span class="skill-box"
-                            style="border: 1px solid #00ffe1; color: #00ffe1; padding: 5px 12px; border-radius: 6px; font-weight: 500; font-size: 0.9rem;">Java</span>
-                        <span class="skill-box"
-                            style="border: 1px solid #00ffe1; color: #00ffe1; padding: 5px 12px; border-radius: 6px; font-weight: 500; font-size: 0.9rem;">SQL</span>
-                        <span class="skill-box"
-                            style="border: 1px solid #00ffe1; color: #00ffe1; padding: 5px 12px; border-radius: 6px; font-weight: 500; font-size: 0.9rem;">C</span>
-                        <span class="skill-box"
-                            style="border: 1px solid #00ffe1; color: #00ffe1; padding: 5px 12px; border-radius: 6px; font-weight: 500; font-size: 0.9rem;">HTML/CSS</span>
+                        <span class="skill-box">Python</span>
+                        <span class="skill-box">Java</span>
+                        <span class="skill-box">SQL</span>
+                        <span class="skill-box">C</span>
+                        <span class="skill-box">HTML/CSS</span>
                     </div>
                 </div>
 
@@ -630,83 +645,55 @@
                 <div class="card-3d gradient-border p-6">
                     <div class="flex items-center gap-3 mb-6">
                         <i class="fas fa-brain text-3xl" style="color:#a400ff"></i>
-                        <h3 class="text-xl font-bold">Data Science & ML</h3>
+                        <h3 class="text-xl font-bold" style="color:#00ffe1">Data Science & ML</h3>
                     </div>
                     <div class="flex flex-wrap gap-2">
-                        <span class="skill-box"
-                            style="border: 1px solid #a400ff; color: #a400ff; padding: 5px 12px; border-radius: 6px; font-weight: 500; font-size: 0.9rem;">Machine
-                            Learning</span>
-                        <span class="skill-box"
-                            style="border: 1px solid #a400ff; color: #a400ff; padding: 5px 12px; border-radius: 6px; font-weight: 500; font-size: 0.9rem;">AI
-                            Tools</span>
-                        <span class="skill-box"
-                            style="border: 1px solid #a400ff; color: #a400ff; padding: 5px 12px; border-radius: 6px; font-weight: 500; font-size: 0.9rem;">EDA
-                            & Data Analysis</span>
-                        <span class="skill-box"
-                            style="border: 1px solid #a400ff; color: #a400ff; padding: 5px 12px; border-radius: 6px; font-weight: 500; font-size: 0.9rem;">Exploratory
-                            Data Analysis</span>
-                        <span class="skill-box"
-                            style="border: 1px solid #a400ff; color: #a400ff; padding: 5px 12px; border-radius: 6px; font-weight: 500; font-size: 0.9rem;">Real-Time
-                            Analytics (Kafka)</span>
+                        <span class="skill-box">Machine Learning</span>
+                        <span class="skill-box">AI Tools</span>
+                        <span class="skill-box">EDA & Data Analysis</span>
+                        <span class="skill-box">Exploratory Data Analysis</span>
+                        <span class="skill-box">Real-Time Analytics (Kafka)</span>
                     </div>
                 </div>
 
                 <!-- Visualization & Analytics -->
                 <div class="card-3d gradient-border p-6">
                     <div class="flex items-center gap-3 mb-6">
-                        <i class="fas fa-chart-line text-3xl" style="color:#ff007a"></i>
-                        <h3 class="text-xl font-bold">Visualization & Analytics</h3>
+                        <i class="fas fa-chart-line text-3xl" style="color:#a400ff"></i>
+                        <h3 class="text-xl font-bold" style="color:#00ffe1">Visualization & Analytics</h3>
                     </div>
                     <div class="flex flex-wrap gap-2">
-                        <span class="skill-box"
-                            style="border: 1px solid #ff007a; color: #ff007a; padding: 5px 12px; border-radius: 6px; font-weight: 500; font-size: 0.9rem;">Power
-                            BI</span>
-                        <span class="skill-box"
-                            style="border: 1px solid #ff007a; color: #ff007a; padding: 5px 12px; border-radius: 6px; font-weight: 500; font-size: 0.9rem;">Tableau</span>
-                        <span class="skill-box"
-                            style="border: 1px solid #ff007a; color: #ff007a; padding: 5px 12px; border-radius: 6px; font-weight: 500; font-size: 0.9rem;">Matplotlib
-                            & Seaborn</span>
-                        <span class="skill-box"
-                            style="border: 1px solid #ff007a; color: #ff007a; padding: 5px 12px; border-radius: 6px; font-weight: 500; font-size: 0.9rem;">Advanced
-                            Excel</span>
+                        <span class="skill-box">Power BI</span>
+                        <span class="skill-box">Tableau</span>
+                        <span class="skill-box">Matplotlib & Seaborn</span>
+                        <span class="skill-box">Advanced Excel</span>
                     </div>
                 </div>
 
                 <!-- Tools & Platforms -->
                 <div class="card-3d gradient-border p-6">
                     <div class="flex items-center gap-3 mb-6">
-                        <i class="fas fa-tools text-3xl" style="color:#7cff7a"></i>
-                        <h3 class="text-xl font-bold">Tools & Platforms</h3>
+                        <i class="fas fa-tools text-3xl" style="color:#a400ff"></i>
+                        <h3 class="text-xl font-bold" style="color:#00ffe1">Tools & Platforms</h3>
                     </div>
                     <div class="flex flex-wrap gap-2">
-                        <span class="skill-box"
-                            style="border: 1px solid #7cff7a; color: #7cff7a; padding: 5px 12px; border-radius: 6px; font-weight: 500; font-size: 0.9rem;">Git/GitHub</span>
-                        <span class="skill-box"
-                            style="border: 1px solid #7cff7a; color: #7cff7a; padding: 5px 12px; border-radius: 6px; font-weight: 500; font-size: 0.9rem;">VS
-                            Code</span>
-                        <span class="skill-box"
-                            style="border: 1px solid #7cff7a; color: #7cff7a; padding: 5px 12px; border-radius: 6px; font-weight: 500; font-size: 0.9rem;">PyCharm</span>
-                        <span class="skill-box"
-                            style="border: 1px solid #7cff7a; color: #7cff7a; padding: 5px 12px; border-radius: 6px; font-weight: 500; font-size: 0.9rem;">Google
-                            Colab</span>
-                        <span class="skill-box"
-                            style="border: 1px solid #7cff7a; color: #7cff7a; padding: 5px 12px; border-radius: 6px; font-weight: 500; font-size: 0.9rem;">Tally
-                            & MS Office</span>
+                        <span class="skill-box">Git/GitHub</span>
+                        <span class="skill-box">VS Code</span>
+                        <span class="skill-box">PyCharm</span>
+                        <span class="skill-box">Google Colab</span>
+                        <span class="skill-box">Tally & MS Office</span>
                     </div>
                 </div>
 
                 <!-- Databases -->
                 <div class="card-3d gradient-border p-6">
                     <div class="flex items-center gap-3 mb-6">
-                        <i class="fas fa-database text-3xl" style="color:#00ffe1"></i>
-                        <h3 class="text-xl font-bold">Databases</h3>
+                        <i class="fas fa-database text-3xl" style="color:#a400ff"></i>
+                        <h3 class="text-xl font-bold" style="color:#00ffe1">Databases</h3>
                     </div>
                     <div class="flex flex-wrap gap-2">
-                        <span class="skill-box"
-                            style="border: 1px solid #00ffe1; color: #00ffe1; padding: 5px 12px; border-radius: 6px; font-weight: 500; font-size: 0.9rem;">SQL
-                            (MySQL)</span>
-                        <span class="skill-box"
-                            style="border: 1px solid #00ffe1; color: #00ffe1; padding: 5px 12px; border-radius: 6px; font-weight: 500; font-size: 0.9rem;">MongoDB</span>
+                        <span class="skill-box">SQL (MySQL)</span>
+                        <span class="skill-box">MongoDB</span>
                     </div>
                 </div>
             </div>
@@ -737,9 +724,9 @@
                     </p>
                     <div class="flex flex-wrap gap-2 mb-4">
                         <span class="tag-badge px-3 py-1 rounded-full text-sm"
-                            style="background: rgba(0,255,225,0.06); color:#00ffe1;">Web App</span>
+                            style="border: 1px solid #a400ff; color: #fff;">Web App</span>
                         <span class="tag-badge px-3 py-1 rounded-full text-sm"
-                            style="background: rgba(164,0,255,0.06); color:#a400ff;">Full Stack Development</span>
+                            style="border: 1px solid #a400ff; color: #fff;">Full Stack Development</span>
                     </div>
                     <div class="text-sm muted">Published: July 2024</div>
 
@@ -755,7 +742,7 @@
                 <!-- IPL Match Outcome Prediction -->
                 <div class="card-3d gradient-border p-6">
                     <div class="flex items-center gap-3 mb-4">
-                        <i class="fas fa-cricket text-3xl" style="color:#a400ff"></i>
+                        <i class="fas fa-baseball-bat-ball text-3xl" style="color:#00ffe1"></i>
                         <h3 class="text-xl font-bold">IPL Match Outcome Prediction</h3>
                     </div>
                     <p class="muted mb-4">
@@ -765,11 +752,9 @@
                     </p>
                     <div class="flex flex-wrap gap-2 mb-4">
                         <span class="tag-badge px-3 py-1 rounded-full text-sm"
-                            style="background: rgba(0,255,225,0.06); color:#00ffe1;">Machine Learning</span>
+                            style="border: 1px solid #a400ff; color: #fff;">Machine Learning</span>
                         <span class="tag-badge px-3 py-1 rounded-full text-sm"
-                            style="background: rgba(164,0,255,0.06); color:#a400ff;">Sports Analytics</span>
-                        <span class="tag-badge px-3 py-1 rounded-full text-sm"
-                            style="background: rgba(255,0,122,0.06); color:#ff007a;">Ensemble Models</span>
+                            style="border: 1px solid #a400ff; color: #fff;">Sports Analytics</span>
                     </div>
                     <div class="text-sm muted">Published: June 2025</div>
 
@@ -785,7 +770,7 @@
                 <!-- AgroTracking -->
                 <div class="card-3d gradient-border p-6">
                     <div class="flex items-center gap-3 mb-4">
-                        <i class="fas fa-seedling text-3xl" style="color:#7cff7a"></i>
+                        <i class="fas fa-seedling text-3xl" style="color:#00ffe1"></i>
                         <h3 class="text-xl font-bold">AgroTracking</h3>
                     </div>
                     <p class="muted mb-4">
@@ -795,11 +780,9 @@
                     </p>
                     <div class="flex flex-wrap gap-2 mb-4">
                         <span class="tag-badge px-3 py-1 rounded-full text-sm"
-                            style="background: rgba(0,255,225,0.06); color:#00ffe1;">IoT & Tracking</span>
+                            style="border: 1px solid #a400ff; color: #fff;">IoT & Tracking</span>
                         <span class="tag-badge px-3 py-1 rounded-full text-sm"
-                            style="background: rgba(164,0,255,0.06); color:#a400ff;">Data Viz</span>
-                        <span class="tag-badge px-3 py-1 rounded-full text-sm"
-                            style="background: rgba(255,0,122,0.06); color:#ff007a;">Supply Chain</span>
+                            style="border: 1px solid #a400ff; color: #fff;">Data Viz</span>
                     </div>
                     <div class="text-sm muted">Published: July 2025</div>
 
@@ -825,11 +808,11 @@
                     </p>
                     <div class="flex flex-wrap gap-2 mb-4">
                         <span class="tag-badge px-3 py-1 rounded-full text-sm"
-                            style="background: rgba(0,255,225,0.06); color:#00ffe1;">Data Visualization</span>
+                            style="border: 1px solid #a400ff; color: #fff;">Data Visualization</span>
                         <span class="tag-badge px-3 py-1 rounded-full text-sm"
-                            style="background: rgba(164,0,255,0.06); color:#a400ff;">Climate Analytics</span>
+                            style="border: 1px solid #a400ff; color: #fff;">Climate Analytics</span>
                         <span class="tag-badge px-3 py-1 rounded-full text-sm"
-                            style="background: rgba(255,0,122,0.06); color:#ff007a;">Impact Study</span>
+                            style="border: 1px solid #a400ff; color: #fff;">Impact Study</span>
                     </div>
                     <div class="text-sm muted">Published: June 2025</div>
 
@@ -845,7 +828,7 @@
                 <!-- AI-Driven University Assistant (NEW) -->
                 <div class="card-3d gradient-border p-6">
                     <div class="flex items-center gap-3 mb-4">
-                        <i class="fas fa-university text-3xl" style="color:#ff007a"></i>
+                        <i class="fas fa-university text-3xl" style="color:#00ffe1"></i>
                         <h3 class="text-xl font-bold">AI-Driven University Assistant (Ongoing)</h3>
                     </div>
                     <p class="muted mb-4">
@@ -856,11 +839,11 @@
                     </p>
                     <div class="flex flex-wrap gap-2 mb-4">
                         <span class="tag-badge px-3 py-1 rounded-full text-sm"
-                            style="background: rgba(0,255,225,0.06); color:#00ffe1;">Computer Vision</span>
+                            style="border: 1px solid #a400ff; color: #fff;">Computer Vision</span>
                         <span class="tag-badge px-3 py-1 rounded-full text-sm"
-                            style="background: rgba(164,0,255,0.06); color:#a400ff;">AI Chatbot</span>
+                            style="border: 1px solid #a400ff; color: #fff;">AI Chatbot</span>
                         <span class="tag-badge px-3 py-1 rounded-full text-sm"
-                            style="background: rgba(255,0,122,0.06); color:#ff007a;">IoT & Automation</span>
+                            style="border: 1px solid #a400ff; color: #fff;">IoT & Automation</span>
                     </div>
                     <div class="text-sm muted mb-3">Status: Ongoing</div>
                     <div class="text-sm muted"><strong>Tech Stack:</strong> Python, Flask, OpenCV, face_recognition
@@ -1000,21 +983,21 @@
                             </div>
                         </div>
                         <div class="flex items-center gap-4 p-4"
-                            style="background: rgba(255,0,122,0.02); border-radius:8px;">
-                            <i class="fab fa-linkedin text-2xl" style="color:#ff007a"></i>
+                            style="background: rgba(164,0,255,0.02); border-radius:8px;">
+                            <i class="fab fa-linkedin text-2xl" style="color:#a400ff"></i>
                             <div>
                                 <div class="text-sm muted">LinkedIn</div>
                                 <a href="https://linkedin.com/in/amruta-hegde-1972b5342" target="_blank"
-                                    class="text-pink-200">linkedin.com/in/amruta-hegde-1972b5342</a>
+                                    class="text-purple-200 hover:text-[#0ef] transition">linkedin.com/in/amruta-hegde-1972b5342</a>
                             </div>
                         </div>
                         <div class="flex items-center gap-4 p-4"
-                            style="background: rgba(124,255,122,0.02); border-radius:8px;">
-                            <i class="fab fa-github text-2xl" style="color:#7cff7a"></i>
+                            style="background: rgba(0,238,255,0.02); border-radius:8px;">
+                            <i class="fab fa-github text-2xl" style="color:#0ef"></i>
                             <div>
                                 <div class="text-sm muted">GitHub</div>
                                 <a href="https://github.com/amrutahere08" target="_blank"
-                                    class="text-lime-200">github.com/amrutahere08</a>
+                                    class="text-cyan-200 hover:text-[#a400ff] transition">github.com/amrutahere08</a>
                             </div>
                         </div>
                         <div class="flex items-center gap-4 p-4"
@@ -1069,7 +1052,7 @@
                     <i class="fab fa-github text-2xl"></i>
                 </a>
                 <a href="https://mail.google.com/mail/?view=cm&fs=1&to=hegdeamruta28@gmail.com" target="_blank"
-                    class="muted hover:text-pink-300 transition">
+                    class="muted hover:text-[#00ffe1] transition">
                     <i class="fas fa-envelope text-2xl"></i>
                 </a>
             </div>
