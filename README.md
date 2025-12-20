@@ -1,4 +1,4 @@
-# Amruta Hegde | Data Science & Portfolio
+# Amruta Hegde | Full-Stack & Software Development Enthusiast | Portfolio
 
 A responsive, professional portfolio showcasing my projects, technical skills, and experience in Data Science, Machine Learning, and Full Stack Development.
 
