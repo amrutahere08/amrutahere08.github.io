@@ -5,7 +5,1285 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Amruta Hegde | Data Science & Analytics Portfolio</title>
+    <meta name="description"<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Amruta Hegde | Data Science & Analytics Portfolio</title>
     <meta name="description"
+        content="Portfolio of Amruta Hegde - MCA Data Science student specializing in Machine Learning, Analytics, and Visualization" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+        @import url('https://fonts.cdnfonts.com/css/chocolate-adventure');
+
+        .typing-cursor::after {
+            content: '|';
+            animation: blink 1s step-end infinite;
+        }
+
+        @keyframes blink {
+            50% {
+                opacity: 0;
+            }
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        html {
+            overflow-y: scroll;
+            /* Force scrollbar to prevent layout shift */
+        }
+
+        .gradient-text {
+            background: linear-gradient(90deg, #00ffe1, #a400ff);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            display: inline-block;
+        }
+
+        .skill-box {
+            background: linear-gradient(90deg, rgba(0, 255, 225, 0.2), rgba(164, 0, 255, 0.2));
+            color: #fff;
+            padding: 5px 12px;
+            border-radius: 6px;
+            font-weight: 500;
+            font-size: 0.9rem;
+            display: inline-block;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        body {
+            background: #1f242d;
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        /* HEADER / NAVBAR */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px 10%;
+            background: rgba(31, 36, 45, 0.9);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(0, 238, 255, 0.1);
+        }
+
+        .logo {
+            font-size: 22px;
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        .navbar a {
+            display: inline-block;
+            font-size: 16px;
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            margin-left: 35px;
+            transition: .3s;
+        }
+
+        .navbar a:hover {
+            color: #0ef;
+        }
+
+        /* HERO SECTION */
+        #home {
+            position: relative;
+            width: 100%;
+            justify-content: center;
+            gap: 50px;
+            min-height: 100vh;
+            /* changed from height: 100vh to min-height to avoid cut-off */
+            background: #1f242d;
+            display: flex;
+            align-items: center;
+            padding: 70px 10% 0;
+            /* overflow: hidden; removed to allow scroll on selection */
+            /* Added to keep animations contained */
+        }
+
+        .home-content {
+            max-width: 600px;
+        }
+
+        .home-content h3 {
+            font-size: 32px;
+            font-weight: 700;
+        }
+
+        .home-content h3:nth-of-type(2) {
+            margin-bottom: 30px;
+            font-size: 20px;
+            color: #00ffe1;
+        }
+
+        .home-content h3 span {
+            color: #0ef;
+        }
+
+        .home-content h1 {
+            font-size: 56px;
+            font-weight: 700;
+            margin: -3px 0;
+        }
+
+        .home-content p {
+            font-size: 16px;
+        }
+
+        .social-media {
+            display: flex;
+            margin: 30px 0;
+        }
+
+        .social-media a {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height: 40px;
+            background: transparent;
+            border: 2px solid #0ef;
+            border-radius: 50%;
+            font-size: 20px;
+            color: #0ef;
+            text-decoration: none;
+            margin-right: 15px;
+            transition: .5s ease;
+        }
+
+        .social-media a:hover {
+            background: #0ef;
+            color: #1f242d;
+
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 28px;
+            background: #0ef;
+            border-radius: 40px;
+
+            font-size: 16px;
+            color: #1f242d;
+            letter-spacing: 1px;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .btn:hover {
+            opacity: 0.9;
+        }
+
+        .home-img {
+            position: relative;
+            width: 410px;
+            height: 410px;
+            margin-top: -80px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Hexagon Logic */
+        .hexagon-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+
+        }
+
+        .hexagon {
+            width: 100%;
+            height: 100%;
+            background: #0ef;
+            /* Border color */
+            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 4px;
+            /* Border thickness */
+        }
+
+        .hexagon-inner {
+            width: 100%;
+            height: 100%;
+            background: #1f242d;
+            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .hexagon-inner img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top;
+        }
+
+
+        /* ANIMATIONS */
+        @keyframes slideRight {
+            0% {
+                transform: translateX(-100px);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideLeft {
+            0% {
+                transform: translateX(100px);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideTop {
+            0% {
+                transform: translateY(100px);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideBottom {
+            0% {
+                transform: translateY(-100px);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes zoomIn {
+            0% {
+                transform: scale(0);
+                opacity: 0;
+            }
+
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        /* LEGACY STYLES (Tweaked for New Theme) */
+
+        .card-3d {
+            background: #323946;
+            /* Matching dark card background */
+            border-radius: 12px;
+            border: 1px solid #0ef;
+            /* Cyan border */
+
+            transition: 0.3s;
+        }
+
+        .card-3d:hover {
+
+            transform: translateY(-5px);
+        }
+
+        .skill-progress {
+            background: #0ef;
+            /* Cyan progress */
+            height: 100%;
+            border-radius: 10px;
+            position: relative;
+
+        }
+
+        .social-media a:hover {
+            background: #0ef;
+            color: #1f242d;
+
+        }
+
+        .modal-img {
+            max-width: 100%;
+            max-height: 85vh;
+            object-fit: contain;
+            border: 2px solid #0ef;
+            border-radius: 8px;
+
+        }
+
+        .close-modal {
+            position: absolute;
+            top: -40px;
+            right: 0;
+            color: #fff;
+            font-size: 2rem;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        .close-modal:hover {
+            color: #0ef;
+        }
+
+        /* Media Queries */
+        @media (max-width: 991px) {
+            .header {
+                padding: 20px 5%;
+            }
+
+            #home {
+                padding: 0 5%;
+                flex-direction: column-reverse;
+                justify-content: center;
+                text-align: center;
+                gap: 50px;
+            }
+
+            .home-img {
+                width: 300px;
+                height: 300px;
+                margin-top: 80px;
+            }
+
+            .home-content h1 {
+                font-size: 40px;
+            }
+
+            .home-content h3 {
+                font-size: 22px;
+            }
+
+            .social-media {
+                justify-content: center;
+            }
+
+            .navbar {
+                display: none;
+            }
+
+            /* Using mobile menu handled by script */
+        }
+
+        @media (max-width: 600px) {
+            .skill-box {
+                padding: 3px 6px;
+                font-size: 0.75rem;
+                margin-bottom: 4px;
+            }
+
+            .card-3d {
+                padding: 1rem !important;
+            }
+
+            .tag-badge {
+                font-size: 0.7rem;
+                padding: 2px 6px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <a href="#" class="logo">Amruta Hegde</a>
+
+        <nav class="navbar hidden md:flex">
+            <a href="#home" style="--i:1" class="active">Home</a>
+            <a href="#about" style="--i:2">About</a>
+            <a href="#skills" style="--i:3">Skills</a>
+            <a href="#projects" style="--i:4">Projects</a>
+            <a href="#education" style="--i:5">Education</a>
+            <a href="#experience" style="--i:6">Experience</a>
+            <a href="#certifications" style="--i:7">Certifications</a>
+            <a href="#contact" style="--i:8">Contact</a>
+        </nav>
+
+        <!-- Mobile Menu Button -->
+        <button id="menu-btn" class="md:hidden text-2xl text-[#0ef]">
+            <i class="fas fa-bars"></i>
+        </button>
+    </header>
+
+    <!-- Mobile Menu Dropdown (Hidden by default, toggled by script) -->
+    <div id="mobile-menu"
+        class="hidden fixed top-[80px] left-0 w-full bg-[#1f242d] border-t border-[#0ef] z-50 p-6 flex flex-col gap-4">
+        <a href="#home" class="text-white hover:text-[#0ef] text-base">Home</a>
+        <a href="#about" class="text-white hover:text-[#0ef] text-base">About</a>
+        <a href="#skills" class="text-white hover:text-[#0ef] text-base">Skills</a>
+        <a href="#projects" class="text-white hover:text-[#0ef] text-base">Projects</a>
+        <a href="#education" class="text-white hover:text-[#0ef] text-base">Education</a>
+        <a href="#experience" class="text-white hover:text-[#0ef] text-base">Experience</a>
+        <a href="#certifications" class="text-white hover:text-[#0ef] text-base">Certifications</a>
+        <a href="#contact" class="text-white hover:text-[#0ef] text-base">Contact</a>
+    </div>
+
+    <!-- Home Section -->
+    <section id="home">
+        <div class="home-content">
+            <h3 id="type-1" style="min-height: 48px;"></h3>
+            <h1 id="type-2" class="gradient-text" style="min-height: 84px;"></h1>
+            <h3 style="color: #fff;">Aspiring Software Developer / Software Engineer <br> Learning & Building</h3>
+            <p>MCA student passionate about software development, software engineering, Python, SQL and hands-on with
+                AI/ML projects.</p>
+            <div class="social-media">
+                <a href="https://linkedin.com/in/amruta-hegde-1972b5342" target="_blank"><i
+                        class="fab fa-linkedin-in"></i></a>
+                <a href="https://github.com/amrutahere08" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=hegdeamruta28@gmail.com" target="_blank"><i
+                        class="fas fa-envelope"></i></a>
+                <a href="#contact"><i class="fas fa-user-circle"></i></a>
+            </div>
+            <a href="https://amrutahere08.github.io/Amruta_Hegde_CV.pdf" target="_blank" class="btn">Download Resume</a>
+        </div>
+
+        <div class="home-img">
+            <div class="hexagon-container">
+                <div class="hexagon">
+                    <div class="hexagon-inner">
+                        <img src="https://raw.githubusercontent.com/amrutahere08/amrutahere08.github.io/main/IMG_0905.JPG"
+                            alt="Profile Logic"
+                            onerror="this.style.display='none'; this.parentNode.innerHTML='<div style=\'font-size:50px\'>👩‍💻</div>'">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 px-6 fade-in">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-4"
+                style="background: linear-gradient(90deg,#00ffe1,#a400ff); -webkit-background-clip:text; color:transparent;">
+                About Me
+            </h2>
+            <div class="w-24 h-1" style="background: linear-gradient(90deg,#00ffe1,#a400ff); margin: 0 auto 3.5rem;">
+            </div>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="gradient-border p-8 card-3d">
+                    <h3 class="text-2xl font-bold mb-4" style="color:#00ffe1">Background</h3>
+                    <p class="muted leading-relaxed mb-4">
+                        I am a Master of Computer Applications (MCA) student at Chanakya University, Bengaluru, with a
+                        academic background and practical exposure to software development and data-driven projects.
+                        Through academic work and internships, I have contributed to the development of intelligent
+                        applications, full-stack systems, and analytical solutions.
+                    </p>
+                    <p class="muted leading-relaxed mb-4">
+                        I have a solid foundation in Python, Java, and SQL, along with hands-on experience in machine
+                        learning, exploratory data analysis (EDA), and data visualization using tools such as Power BI
+                        and Tableau. My project experience includes building end-to-end applications, working with
+                        databases and APIs, and applying analytical techniques to derive meaningful insights.
+                    </p>
+                    <p class="muted leading-relaxed mb-4">
+                        I continuously work on strengthening my technical skills by exploring modern development
+                        practices and data-oriented approaches. I enjoy learning new technologies and applying them to
+                        practical scenarios to create efficient and scalable software solutions.
+                    </p>
+                    <p class="muted leading-relaxed">
+                        I am actively seeking opportunities in software development, full-stack development, or software
+                        engineering roles, where I can contribute to building reliable, user-focused solutions while
+                        growing professionally.
+                    </p>
+                </div>
+
+                <div class="gradient-border p-8 card-3d">
+                    <h3 class="text-2xl font-bold mb-6" style="color:#00ffe1">Quick Facts</h3>
+                    <div class="space-y-6">
+                        <!-- Fact 1 -->
+                        <div class="flex items-start gap-5">
+                            <div class="w-12 flex justify-center shrink-0">
+                                <i class="fas fa-graduation-cap text-2xl mt-1" style="color:#a400ff"></i>
+                            </div>
+                            <div>
+                                <div class="font-semibold uppercase text-xs tracking-widest mb-1" style="color:#00ffe1">
+                                    Current
+                                    CGPA</div>
+                                <div class="font-medium text-lg leading-tight" style="color:#fff">8.48 (MCA)</div>
+                            </div>
+                        </div>
+
+                        <!-- Fact 2 -->
+                        <div class="flex items-start gap-5">
+                            <div class="w-12 flex justify-center shrink-0">
+                                <i class="fas fa-map-marker-alt text-2xl mt-1" style="color:#a400ff"></i>
+                            </div>
+                            <div>
+                                <div class="font-semibold uppercase text-xs tracking-widest mb-1" style="color:#00ffe1">
+                                    Location</div>
+                                <div class="font-medium text-lg leading-tight" style="color:#fff">Bengaluru, India
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Fact 3 -->
+                        <div class="flex items-start gap-5">
+                            <div class="w-12 flex justify-center shrink-0">
+                                <i class="fas fa-language text-2xl mt-1" style="color:#a400ff"></i>
+                            </div>
+                            <div>
+                                <div class="font-semibold uppercase text-xs tracking-widest mb-1" style="color:#00ffe1">
+                                    Languages</div>
+                                <div class="font-medium text-lg leading-tight" style="color:#fff">English (Fluent),
+                                    Kannada
+                                    (Advanced)</div>
+                            </div>
+                        </div>
+
+                        <!-- Fact 4 -->
+                        <div class="flex items-start gap-5">
+                            <div class="w-12 flex justify-center shrink-0">
+                                <i class="fas fa-lightbulb text-2xl mt-1" style="color:#a400ff"></i>
+                            </div>
+                            <div>
+                                <div class="font-semibold uppercase text-xs tracking-widest mb-1" style="color:#00ffe1">
+                                    Interests</div>
+                                <div class="font-medium leading-relaxed" style="color:#fff">Software Development,
+                                    AI/ML, Full-stack Development, Software Engineering, Data Visualization &
+                                    Storytelling</div>
+                            </div>
+                        </div>
+
+                        <!-- Fact 5 (New Filler) -->
+                        <div class="flex items-start gap-5">
+                            <div class="w-12 flex justify-center shrink-0">
+                                <i class="fas fa-users text-2xl mt-1" style="color:#a400ff"></i>
+                            </div>
+                            <div>
+                                <div class="font-semibold uppercase text-xs tracking-widest mb-1" style="color:#00ffe1">
+                                    Soft Skills</div>
+                                <div class="font-medium text-lg leading-tight" style="color:#fff">Problem Solving,
+                                    Team
+                                    Collaboration, Adaptability, Decision Making, Detail Oriented</div>
+                            </div>
+                        </div>
+
+                        <!-- Fact 6 -->
+                        <div class="flex items-start gap-5">
+                            <div class="w-12 flex justify-center shrink-0">
+                                <i class="fas fa-user-tie text-2xl mt-1" style="color:#a400ff"></i>
+                            </div>
+                            <div>
+                                <div class="font-semibold uppercase text-xs tracking-widest mb-1" style="color:#00ffe1">
+                                    Preferred Roles</div>
+                                <div class="font-medium text-lg leading-tight" style="color:#fff">Software Developer,
+                                    Full-stack developer, Software Engineer, Data Analytics</div>
+                            </div>
+                        </div>
+
+                        <!-- Fact 7 -->
+                        <div class="flex items-start gap-5">
+                            <div class="w-12 flex justify-center shrink-0">
+                                <i class="fas fa-building text-2xl mt-1" style="color:#a400ff"></i>
+                            </div>
+                            <div>
+                                <div class="font-semibold uppercase text-xs tracking-widest mb-1" style="color:#00ffe1">
+                                    Work Preference</div>
+                                <div class="font-medium text-lg leading-tight" style="color:#fff">Open to Remote /
+                                    Hybrid / On-site</div>
+                            </div>
+                        </div>
+
+                        <!-- Fact 8 -->
+                        <div class="flex items-start gap-5">
+                            <div class="w-12 flex justify-center shrink-0">
+                                <i class="fas fa-camera text-2xl mt-1" style="color:#a400ff"></i>
+                            </div>
+                            <div>
+                                <div class="font-semibold uppercase text-xs tracking-widest mb-1" style="color:#00ffe1">
+                                    Hobbies</div>
+                                <div class="font-medium text-lg leading-tight" style="color:#fff">Photography,
+                                    Videography, Editing, Drawing/Painting, Playing Badminton</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 px-6 fade-in">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-4"
+                style="background: linear-gradient(90deg,#00ffe1,#a400ff); -webkit-background-clip:text; color:transparent;">
+                Technical Skills
+            </h2>
+            <div class="w-24 h-1" style="background: linear-gradient(90deg,#00ffe1,#a400ff); margin: 0 auto 3.5rem;">
+            </div>
+            <div class="grid md:grid-cols-2 gap-8">
+
+                <!-- Programming Languages -->
+                <div class="card-3d gradient-border p-6">
+                    <div class="flex items-center gap-3 mb-6">
+                        <i class="fas fa-code text-3xl" style="color:#a400ff"></i>
+                        <h3 class="text-xl font-bold" style="color:#00ffe1">Programming Languages</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-box">Python</span>
+                        <span class="skill-box">Java</span>
+                        <span class="skill-box">SQL</span>
+                        <span class="skill-box">C</span>
+                        <span class="skill-box">HTML/CSS</span>
+                    </div>
+                </div>
+
+                <!-- Data Science & ML -->
+                <div class="card-3d gradient-border p-6">
+                    <div class="flex items-center gap-3 mb-6">
+                        <i class="fas fa-brain text-3xl" style="color:#a400ff"></i>
+                        <h3 class="text-xl font-bold" style="color:#00ffe1">Data Science & ML</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-box">Machine Learning</span>
+                        <span class="skill-box">AI Tools</span>
+                        <span class="skill-box">EDA & Data Analysis</span>
+                        <span class="skill-box">Exploratory Data Analysis</span>
+                        <span class="skill-box">Real-Time Analytics (Kafka)</span>
+                    </div>
+                </div>
+
+                <!-- Visualization & Analytics -->
+                <div class="card-3d gradient-border p-6">
+                    <div class="flex items-center gap-3 mb-6">
+                        <i class="fas fa-chart-line text-3xl" style="color:#a400ff"></i>
+                        <h3 class="text-xl font-bold" style="color:#00ffe1">Visualization & Analytics</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-box">Power BI</span>
+                        <span class="skill-box">Tableau</span>
+                        <span class="skill-box">Matplotlib & Seaborn</span>
+                        <span class="skill-box">Advanced Excel</span>
+                    </div>
+                </div>
+
+                <!-- Tools & Platforms -->
+                <div class="card-3d gradient-border p-6">
+                    <div class="flex items-center gap-3 mb-6">
+                        <i class="fas fa-tools text-3xl" style="color:#a400ff"></i>
+                        <h3 class="text-xl font-bold" style="color:#00ffe1">Tools & Platforms</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-box">Git/GitHub</span>
+                        <span class="skill-box">VS Code</span>
+                        <span class="skill-box">PyCharm</span>
+                        <span class="skill-box">Google Colab</span>
+                        <span class="skill-box">Tally & MS Office</span>
+                    </div>
+                </div>
+
+                <!-- Databases -->
+                <div class="card-3d gradient-border p-6">
+                    <div class="flex items-center gap-3 mb-6">
+                        <i class="fas fa-database text-3xl" style="color:#a400ff"></i>
+                        <h3 class="text-xl font-bold" style="color:#00ffe1">Databases</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-box">SQL (MySQL)</span>
+                        <span class="skill-box">MongoDB</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 px-6 fade-in">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-4"
+                style="background: linear-gradient(90deg,#00ffe1,#a400ff); -webkit-background-clip:text; color:transparent;">
+                Projects
+            </h2>
+            <div class="w-24 h-1" style="background: linear-gradient(90deg,#00ffe1,#a400ff); margin: 0 auto 3.5rem;">
+            </div>
+            <div class="grid md:grid-cols-2 gap-8">
+
+                <!-- Intelligent Tourist System -->
+                <div class="card-3d gradient-border p-6">
+                    <div class="flex items-center gap-3 mb-4">
+                        <i class="fas fa-map-signs text-3xl" style="color:#00ffe1"></i>
+                        <h3 class="text-xl font-bold">Online Intelligent Tourist System</h3>
+                    </div>
+                    <p class="muted mb-4">
+                        An intelligent web-based system delivering personalized travel recommendations using user
+                        preferences and location; built as a <b>Full Stack Development</b> project with interactive maps
+                        and optimized itinerary suggestions.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="tag-badge px-3 py-1 rounded-full text-sm"
+                            style="border: 1px solid #a400ff; color: #fff;">Web App</span>
+                        <span class="tag-badge px-3 py-1 rounded-full text-sm"
+                            style="border: 1px solid #a400ff; color: #fff;">Full Stack Development</span>
+                    </div>
+                    <div class="text-sm muted">Published: July 2024</div>
+
+                    <!-- Repo button added -->
+                    <div class="mt-4">
+                        <a class="btn" href="https://github.com/amrutahere08/Online-Intelligent-Tourist-System.git"
+                            target="_blank" rel="noopener noreferrer" style="padding: 6px 12px; font-size: 13px;">
+                            <i class="fab fa-github mr-2"></i>View
+                        </a>
+                    </div>
+                </div>
+
+                <!-- AgroTracking -->
+                <div class="card-3d gradient-border p-6">
+                    <div class="flex items-center gap-3 mb-4">
+                        <i class="fas fa-seedling text-3xl" style="color:#00ffe1"></i>
+                        <h3 class="text-xl font-bold">AgroTracking</h3>
+                    </div>
+                    <p class="muted mb-4">
+                        A farm produce tracking solution to monitor supply chain stages, crop health logs and
+                        deliveries. Built with a backend database, reporting dashboards and QR-based tracking for
+                        farm-to-market transparency.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="tag-badge px-3 py-1 rounded-full text-sm"
+                            style="border: 1px solid #a400ff; color: #fff;">IoT & Tracking</span>
+                        <span class="tag-badge px-3 py-1 rounded-full text-sm"
+                            style="border: 1px solid #a400ff; color: #fff;">Data Viz</span>
+                    </div>
+                    <div class="text-sm muted">Published: July 2025</div>
+
+                    <!-- Repo button added -->
+                    <div class="mt-4">
+                        <a class="btn" href="https://github.com/amrutahere08/AgroTracking.git" target="_blank"
+                            rel="noopener noreferrer" style="padding: 6px 12px; font-size: 13px;">
+                            <i class="fab fa-github mr-2"></i>View
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Smart Placement Portal (NEW) -->
+                <div class="card-3d gradient-border p-6">
+                    <div class="flex items-center gap-3 mb-4">
+                        <i class="fas fa-user-graduate text-3xl" style="color:#00ffe1"></i>
+                        <h3 class="text-xl font-bold">Smart-Placement-Portal</h3>
+                    </div>
+                    <p class="muted mb-4">
+                        Smart Processing & Strategic Placement Data Management system. Streamlines campus placement with
+                        student profiling, job tracking, and AI-driven matching.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="tag-badge px-3 py-1 rounded-full text-sm"
+                            style="border: 1px solid #a400ff; color: #fff;">Web App</span>
+                        <span class="tag-badge px-3 py-1 rounded-full text-sm"
+                            style="border: 1px solid #a400ff; color: #fff;">MERN Stack</span>
+                    </div>
+                    <div class="text-sm muted mb-2">Tech Stack: ReactJS, NodeJS, ExpressJS, MongoDB</div>
+
+                    <div class="mt-4">
+                        <a class="btn" href="https://github.com/amrutahere08/Smart_Placement_Portal.git" target="_blank"
+                            rel="noopener noreferrer" style="padding: 6px 12px; font-size: 13px;">
+                            <i class="fab fa-github mr-2"></i>View
+                        </a>
+                    </div>
+                </div>
+
+                <!-- AI-Driven University Assistant (Ongoing) -->
+                <div class="card-3d gradient-border p-6">
+                    <div class="flex items-center gap-3 mb-4">
+                        <i class="fas fa-university text-3xl" style="color:#00ffe1"></i>
+                        <h3 class="text-xl font-bold">AI-Driven University Assistant (Ongoing)</h3>
+                    </div>
+                    <p class="muted mb-4">
+                        Built an intelligent campus system featuring real-time face-recognition attendance, a
+                        Gemini-based chatbot, IoT automation, and database-driven user workflows. Implemented a robust
+                        computer-vision pipeline using HOG/CNN face detection and OpenCV real-time recognition for
+                        accurate automatic attendance marking.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="tag-badge px-3 py-1 rounded-full text-sm"
+                            style="border: 1px solid #a400ff; color: #fff;">Computer Vision</span>
+                        <span class="tag-badge px-3 py-1 rounded-full text-sm"
+                            style="border: 1px solid #a400ff; color: #fff;">AI Chatbot</span>
+                        <span class="tag-badge px-3 py-1 rounded-full text-sm"
+                            style="border: 1px solid #a400ff; color: #fff;">IoT & Automation</span>
+                    </div>
+                    <div class="text-sm muted mb-3">Status: Ongoing</div>
+                    <div class="text-sm muted"><strong>Tech Stack:</strong> Python, Flask, OpenCV, face_recognition
+                        (dlib), SQLAlchemy, MySQL, Gemini LLM, IoT, REST APIs</div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Academic Works Section (NEW) -->
+    <section id="academic" class="py-20 px-6 fade-in">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-4"
+                style="background: linear-gradient(90deg,#00ffe1,#a400ff); -webkit-background-clip:text; color:transparent;">
+                Academic Works
+            </h2>
+            <div class="w-24 h-1" style="background: linear-gradient(90deg,#00ffe1,#a400ff); margin: 0 auto 3.5rem;">
+            </div>
+            <div class="grid md:grid-cols-2 gap-8">
+
+                <!-- IPL Match Outcome Prediction -->
+                <div class="card-3d gradient-border p-6">
+                    <div class="flex items-center gap-3 mb-4">
+                        <i class="fas fa-baseball-bat-ball text-3xl" style="color:#00ffe1"></i>
+                        <h3 class="text-xl font-bold">IPL Match Outcome Prediction</h3>
+                    </div>
+                    <p class="muted mb-4">
+                        Predicting match outcomes using historical IPL data, team/player statistics and ensemble machine
+                        learning models. Includes feature engineering for venue, toss, and player form to improve
+                        predictive accuracy.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="tag-badge px-3 py-1 rounded-full text-sm"
+                            style="border: 1px solid #a400ff; color: #fff;">Machine Learning</span>
+                        <span class="tag-badge px-3 py-1 rounded-full text-sm"
+                            style="border: 1px solid #a400ff; color: #fff;">Sports Analytics</span>
+                    </div>
+                    <div class="text-sm muted">Published: June 2025</div>
+
+                    <!-- Repo button added -->
+                    <div class="mt-4">
+                        <a class="btn" href="https://github.com/amrutahere08/IPLAnalysis.git" target="_blank"
+                            rel="noopener noreferrer" style="padding: 6px 12px; font-size: 13px;">
+                            <i class="fab fa-github mr-2"></i>View
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Climate Change and Disaster Impact Analysis -->
+                <div class="card-3d gradient-border p-6">
+                    <div class="flex items-center gap-3 mb-4">
+                        <i class="fas fa-cloud-sun-rain text-3xl" style="color:#00ffe1"></i>
+                        <h3 class="text-xl font-bold">Climate Change and Disaster Impact Analysis on Data Visualization
+                        </h3>
+                    </div>
+                    <p class="muted mb-4">
+                        Analyzed climate impact trends and major disasters using visualization tools. Delivered dynamic
+                        dashboards to communicate data-driven insights for policy and awareness.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="tag-badge px-3 py-1 rounded-full text-sm"
+                            style="border: 1px solid #a400ff; color: #fff;">Data Visualization</span>
+                        <span class="tag-badge px-3 py-1 rounded-full text-sm"
+                            style="border: 1px solid #a400ff; color: #fff;">Climate Analytics</span>
+                        <span class="tag-badge px-3 py-1 rounded-full text-sm"
+                            style="border: 1px solid #a400ff; color: #fff;">Impact Study</span>
+                    </div>
+                    <div class="text-sm muted">Published: June 2025</div>
+
+                    <!-- Repo button added -->
+                    <div class="mt-4">
+                        <a class="btn" href="https://github.com/amrutahere08/Climate-Change-Analysis.git"
+                            target="_blank" rel="noopener noreferrer" style="padding: 6px 12px; font-size: 13px;">
+                            <i class="fab fa-github mr-2"></i>View
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="education" class="py-20 px-6 fade-in">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-4"
+                style="background: linear-gradient(90deg,#00ffe1,#a400ff); -webkit-background-clip:text; color:transparent;">
+                Experience & Education
+            </h2>
+            <div class="w-24 h-1" style="background: linear-gradient(90deg,#00ffe1,#a400ff); margin: 0 auto 3.5rem;">
+            </div>
+            <div class="space-y-8">
+                <div class="card-3d gradient-border p-6">
+                    <div class="flex items-start gap-4">
+                        <div class="text-4xl">🎓</div>
+                        <div class="flex-1">
+                            <h3 class="text-2xl font-bold mb-2">Master of Computer Applications (MCA)</h3>
+                            <div style="color:#00ffe1" class="mb-2">Chanakya University, Bengaluru</div>
+                            <div class="muted mb-4">2024 - 2026 | CGPA: 8.48</div>
+                            <p class="muted">Specialization in Data Science — Machine Learning, Real-Time Analytics
+                                (Kafka), and Advanced Visualization.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-3d gradient-border p-6">
+                    <div class="flex items-start gap-4">
+                        <div class="text-4xl">🎓</div>
+                        <div class="flex-1">
+                            <h3 class="text-2xl font-bold mb-2">Bachelor of Computer Applications (BCA)</h3>
+                            <div style="color:#00ffe1" class="mb-2">JSS SMI UG &amp; PG Studies, Dharwad, Karnataka,
+                                India</div>
+                            <div class="muted mb-4">2021 - 2024 | CGPA: 9.16</div>
+                            <p class="muted">Core foundations in programming, databases and software development.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Internship with Certificate Button -->
+                <div id="experience" class="scroll-mt-24"></div>
+                <div class="card-3d gradient-border p-6">
+                    <div class="flex items-start gap-4">
+                        <div class="text-4xl">💼</div>
+                        <div class="flex-1">
+                            <h3 class="text-2xl font-bold mb-2">Full Stack Development Intern</h3>
+                            <div style="color:#00ffe1" class="mb-2">SVARKS Information Technology LLP - Bengaluru, India
+                            </div>
+                            <div class="muted mb-4">April 2024 - June 2024</div>
+                            <p class="muted mb-4">Completed 245 hours of work as a full stack development intern.
+                                Demonstrated a special flair for development and performance in the preparation of the
+                                report. Graded 8/10 for quality and achievement.</p>
+                            <button
+                                onclick="openModal('https://raw.githubusercontent.com/amrutahere08/amrutahere08.github.io/main/SVARKS.jpg')"
+                                class="btn"
+                                style="padding: 10px 20px; font-size: 14px; border: none; cursor: pointer; text-align: center; display: inline-flex; align-items: center; text-decoration: none;">
+                                <i class="fas fa-certificate mr-2"></i>View Certificate
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="py-20 px-6 fade-in">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-4"
+                style="background: linear-gradient(90deg,#00ffe1,#a400ff); -webkit-background-clip:text; color:transparent;">
+                Certifications
+            </h2>
+            <div class="w-24 h-1" style="background: linear-gradient(90deg,#00ffe1,#a400ff); margin: 0 auto 3.5rem;">
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <a href="https://www.hackerrank.com/certificates/e645c4239e40" target="_blank" class="no-underline">
+                    <div
+                        class="card-3d gradient-border p-6 text-center muted hover:scale-105 transition-transform relative h-full">
+                        <i class="fas fa-external-link-alt absolute top-3 right-3 text-sm opacity-70"></i>
+                        <i class="fas fa-certificate text-4xl" style="color:#a400ff"></i>
+                        <h3 class="font-bold mb-2 text-lg">Basic SQL</h3>
+                        <p class="text-sm muted mb-3">HackerRank</p>
+                        <p class="text-xs muted">Fundamental SQL queries and database operations</p>
+                    </div>
+                </a>
+                <a href="https://www.hackerrank.com/certificates/3f54d681fc66" target="_blank" class="no-underline">
+                    <div
+                        class="card-3d gradient-border p-6 text-center muted hover:scale-105 transition-transform relative h-full">
+                        <i class="fas fa-external-link-alt absolute top-3 right-3 text-sm opacity-70"></i>
+                        <i class="fas fa-certificate text-4xl" style="color:#ff007a"></i>
+                        <h3 class="font-bold mb-2 text-lg">Python Programming</h3>
+                        <p class="text-sm muted mb-3">HackerRank</p>
+                        <p class="text-xs muted">Core Python programming concepts and applications</p>
+                    </div>
+                </a>
+                <a href="https://amrutahere08.github.io/IBMDesign20251217-32-cmlzw7.pdf" target="_blank"
+                    class="no-underline">
+                    <div
+                        class="card-3d gradient-border p-6 text-center muted hover:scale-105 transition-transform relative h-full">
+                        <i class="fas fa-external-link-alt absolute top-3 right-3 text-sm opacity-70"></i>
+                        <i class="fas fa-robot text-4xl" style="color:#00ffe1"></i>
+                        <h3 class="font-bold mb-2 text-lg">AI Fundamentals</h3>
+                        <p class="text-sm muted mb-3">IBM SkillsBuild</p>
+                        <p class="text-xs muted">Artificial Intelligence, Machine Learning & Deep Learning Concepts</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 px-6 fade-in">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-4"
+                style="background: linear-gradient(90deg,#00ffe1,#a400ff); -webkit-background-clip:text; color:transparent;">
+                Get In Touch
+            </h2>
+            <div class="w-24 h-1" style="background: linear-gradient(90deg,#00ffe1,#a400ff); margin: 0 auto 3.5rem;">
+            </div>
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="gradient-border p-8 card-3d">
+                    <h3 class="text-2xl font-bold mb-6" style="color:#00ffe1">Let's Connect!</h3>
+                    <p class="muted mb-8 leading-relaxed">
+                        I'm actively seeking opportunities in software development, software engineer intern roles.
+                        Reach out for collaboration, projects or to discuss data.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-4 p-4"
+                            style="background: rgba(0,255,225,0.02); border-radius:8px;">
+                            <i class="fas fa-envelope text-2xl" style="color:#00ffe1"></i>
+                            <div>
+                                <div class="text-sm muted">Email</div>
+                                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=hegdeamruta28@gmail.com"
+                                    target="_blank" class="text-cyan-200">hegdeamruta28@gmail.com</a>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4 p-4"
+                            style="background: rgba(164,0,255,0.02); border-radius:8px;">
+                            <i class="fas fa-phone text-2xl" style="color:#a400ff"></i>
+                            <div>
+                                <div class="text-sm muted">Phone</div>
+                                <span class="text-purple-200">+91 (available on request)</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4 p-4"
+                            style="background: rgba(164,0,255,0.02); border-radius:8px;">
+                            <i class="fab fa-linkedin text-2xl" style="color:#a400ff"></i>
+                            <div>
+                                <div class="text-sm muted">LinkedIn</div>
+                                <a href="https://linkedin.com/in/amruta-hegde-1972b5342" target="_blank"
+                                    class="text-purple-200 hover:text-[#0ef] transition">linkedin.com/in/amruta-hegde-1972b5342</a>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4 p-4"
+                            style="background: rgba(0,238,255,0.02); border-radius:8px;">
+                            <i class="fab fa-github text-2xl" style="color:#0ef"></i>
+                            <div>
+                                <div class="text-sm muted">GitHub</div>
+                                <a href="https://github.com/amrutahere08" target="_blank"
+                                    class="text-cyan-200 hover:text-[#a400ff] transition">github.com/amrutahere08</a>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4 p-4"
+                            style="background: rgba(0,255,225,0.02); border-radius:8px;">
+                            <i class="fas fa-map-marker-alt text-2xl" style="color:#00ffe1"></i>
+                            <div>
+                                <div class="text-sm muted">Location</div>
+                                <span class="text-cyan-200">Bengaluru, India</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="gradient-border p-8 card-3d">
+                    <h3 class="text-2xl font-bold mb-6" style="color:#00ffe1">Send a Message</h3>
+                    <form id="contact-form" class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium mb-2 muted">Your Name</label>
+                            <input type="text" id="name" name="name" required
+                                class="w-full px-4 py-3 bg-[#05060b] border border-cyan-600/10 rounded-lg focus:outline-none focus:border-cyan-300 transition" />
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium mb-2 muted">Your Email</label>
+                            <input type="email" id="email" name="email" required
+                                class="w-full px-4 py-3 bg-[#05060b] border border-cyan-600/10 rounded-lg focus:outline-none focus:border-cyan-300 transition" />
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium mb-2 muted">Message</label>
+                            <textarea id="message" name="message" rows="5" required
+                                class="w-full px-4 py-3 bg-[#05060b] border border-cyan-600/10 rounded-lg focus:outline-none focus:border-cyan-300 transition resize-none"></textarea>
+                        </div>
+                        <button type="submit" class="w-full py-4 rounded-lg font-semibold"
+                            style="background: linear-gradient(90deg,#00ffe1,#a400ff); color:#010103;">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black/60 border-t border-cyan-600/8 py-8">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <p class="muted mb-4">&copy; 2025 Amruta Hegde. All rights reserved.</p>
+            <div class="flex justify-center space-x-6">
+                <a href="https://linkedin.com/in/amruta-hegde-1972b5342" target="_blank"
+                    class="muted hover:text-cyan-300 transition">
+                    <i class="fab fa-linkedin text-2xl"></i>
+                </a>
+                <a href="https://github.com/amrutahere08" target="_blank"
+                    class="muted hover:text-purple-300 transition">
+                    <i class="fab fa-github text-2xl"></i>
+                </a>
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=hegdeamruta28@gmail.com" target="_blank"
+                    class="muted hover:text-[#00ffe1] transition">
+                    <i class="fas fa-envelope text-2xl"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Certificate Modal -->
+    <div id="certModal" class="fixed inset-0 bg-black/90 hidden z-[1000] flex justify-center items-center p-4"
+        style="backdrop-filter: blur(5px);" onclick="closeModal(event)">
+        <div class="relative max-w-4xl w-full flex justify-center">
+            <button onclick="closeModal(event)" class="close-modal">&times;</button>
+            <img id="modalImg" src="" alt="Certificate" class="modal-img shadow-[0_0_30px_rgba(0,255,225,0.3)]">
+        </div>
+    </div>
+
+    <script>
+        // Modal Logic
+        function openModal(imgSrc) {
+            const modal = document.getElementById('certModal');
+            const modalImg = document.getElementById('modalImg');
+            if (modal && modalImg) {
+                modalImg.src = imgSrc;
+                modal.classList.remove('hidden');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        function closeModal(e) {
+            if (e.target !== document.getElementById('modalImg')) {
+                document.getElementById('certModal').classList.add('hidden');
+                document.body.style.overflow = 'auto';
+            }
+        }
+
+        // Typing Animation Logic
+        function typeWriter(elementId, text, speed, callback) {
+            let i = 0;
+            const element = document.getElementById(elementId);
+            if (!element) return;
+
+            element.classList.add('typing-cursor');
+            element.textContent = ''; // Ensure clear before typing
+
+            function type() {
+                if (i < text.length) {
+                    element.textContent += text.charAt(i);
+                    i++;
+                    setTimeout(type, speed);
+                } else {
+                    element.classList.remove('typing-cursor');
+                    if (callback) callback();
+                }
+            }
+            type();
+        }
+
+        function deleteWriter(elementId, speed, callback) {
+            const element = document.getElementById(elementId);
+            if (!element) return;
+
+            element.classList.add('typing-cursor');
+            let text = element.textContent;
+
+            function erase() {
+                if (text.length > 0) {
+                    text = text.substring(0, text.length - 1);
+                    element.textContent = text;
+                    setTimeout(erase, speed);
+                } else {
+                    element.classList.remove('typing-cursor');
+                    if (callback) callback();
+                }
+            }
+            erase();
+        }
+
+        // Start typing on load
+        window.addEventListener('load', () => {
+            startTypingLoop();
+        });
+
+        function startTypingLoop() {
+            // Explicit cleanup
+            const t1 = document.getElementById('type-1');
+            const t2 = document.getElementById('type-2');
+            if (t1) { t1.textContent = ''; t1.classList.remove('typing-cursor'); }
+            if (t2) { t2.textContent = ''; t2.classList.remove('typing-cursor'); }
+
+            // Type Line 1
+            typeWriter('type-1', "Hello, It's Me", 100, () => {
+                // Type Line 2
+                typeWriter('type-2', "Amruta Hegde", 100, () => {
+                    // Wait then delete backwards
+                    setTimeout(() => {
+                        // Delete Line 2 first
+                        deleteWriter('type-2', 50, () => {
+                            // Delete Line 1
+                            deleteWriter('type-1', 50, () => {
+                                // Restart loop
+                                setTimeout(startTypingLoop, 500);
+                            });
+                        });
+                    }, 1500); // Reduced gap
+                });
+            });
+        }
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    const mobileMenu = document.getElementById('mobile-menu');
+                    if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+        const menuBtn = document.getElementById('menu-btn');
+        if (menuBtn) {
+            menuBtn.addEventListener('click', () => {
+                const m = document.getElementById('mobile-menu');
+                if (m) m.classList.toggle('hidden');
+            });
+        }
+        const fadeElements = document.querySelectorAll('.fade-in');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('visible');
+            });
+        }, { threshold: 0.12 });
+        fadeElements.forEach(el => observer.observe(el));
+        const contactForm = document.getElementById('contact-form');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function (e) {
+                e.preventDefault();
+                const name = document.getElementById('name').value.trim();
+                const email = document.getElementById('email').value.trim();
+                const message = document.getElementById('message').value.trim();
+                const subject = encodeURIComponent(`Portfolio Contact from ${name || 'Website Visitor'}`);
+                const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
+                const gmailLink = `https://mail.google.com/mail/?view=cm&fs=1&to=hegdeamruta28@gmail.com&su=${subject}&body=${body}`;
+                window.open(gmailLink, '_blank');
+                this.reset();
+                // setTimeout(() => alert('Opening Gmail...'), 200);
+            });
+        }
+
+    </script>
+</body>
+
+</html>
         content="Portfolio of Amruta Hegde - MCA Data Science student specializing in Machine Learning, Analytics, and Visualization" />
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
