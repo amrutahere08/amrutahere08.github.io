@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Amruta Hegde | Software Developer(full-Stack) Portfolio</title>
+    <title>Amruta Hegde | Data Science & Analytics Portfolio</title>
     <meta name="description"
         content="Portfolio of Amruta Hegde - MCA Data Science student specializing in Machine Learning, Analytics, and Visualization" />
     <script src="https://cdn.tailwindcss.com"></script>
@@ -111,8 +111,6 @@
             display: flex;
             align-items: center;
             padding: 70px 10% 0;
-            /* overflow: hidden; removed to allow scroll on selection */
-            /* Added to keep animations contained */
         }
 
         .home-content {
@@ -210,13 +208,11 @@
             width: 100%;
             height: 100%;
             background: #0ef;
-            /* Border color */
             clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
             display: flex;
             justify-content: center;
             align-items: center;
             padding: 4px;
-            /* Border thickness */
         }
 
         .hexagon-inner {
@@ -236,7 +232,6 @@
             object-fit: cover;
             object-position: top;
         }
-
 
         /* ANIMATIONS */
         @keyframes slideRight {
@@ -303,10 +298,8 @@
 
         .card-3d {
             background: #323946;
-            /* Matching dark card background */
             border-radius: 12px;
             border: 1px solid #0ef;
-            /* Cyan border */
             transition: 0.3s;
             display: flex;
             flex-direction: column;
@@ -319,17 +312,14 @@
 
         .skill-progress {
             background: #0ef;
-            /* Cyan progress */
             height: 100%;
             border-radius: 10px;
             position: relative;
-
         }
 
         .social-media a:hover {
             background: #0ef;
             color: #1f242d;
-
         }
 
         .modal-img {
@@ -338,7 +328,6 @@
             object-fit: contain;
             border: 2px solid #0ef;
             border-radius: 8px;
-
         }
 
         .close-modal {
@@ -404,9 +393,7 @@
 
             .card-3d {
                 padding: 2rem !important;
-                /* Increased padding further as requested */
                 gap: 1.5rem;
-                /* Increased internal gap for breathing room */
             }
 
             .tag-badge {
@@ -437,7 +424,6 @@
         /* ROBUST FALLBACK STYLES (No Tailwind Dependency) */
         .std-container {
             max-width: 1280px;
-            /* Increased max-width to reduce side margins */
             margin: 0 auto;
             width: 100%;
         }
@@ -471,7 +457,6 @@
             outline: none;
             transition: border-color 0.3s;
             display: block;
-            /* Ensure it takes full width */
             font-family: inherit;
         }
 
@@ -511,6 +496,14 @@
             transform: translateY(-3px);
             box-shadow: 0 0 15px rgba(0, 255, 225, 0.3);
         }
+
+        footer {
+            margin-top: 4rem;
+            padding: 2rem 0;
+            text-align: center;
+            color: rgba(255,255,255,0.7);
+            border-top: 1px solid rgba(0,238,255,0.06);
+        }
     </style>
 </head>
 
@@ -532,12 +525,12 @@
         </nav>
 
         <!-- Mobile Menu Button -->
-        <button id="menu-btn" class="md:hidden text-2xl text-[#0ef]">
+        <button id="menu-btn" class="md:hidden text-2xl text-[#0ef]" aria-label="Toggle menu">
             <i class="fas fa-bars"></i>
         </button>
     </header>
 
-    <!-- Mobile Menu Dropdown (Hidden by default, toggled by script) -->
+    <!-- Mobile Menu Dropdown -->
     <div id="mobile-menu"
         class="hidden fixed top-[80px] left-0 w-full bg-[#1f242d] border-t border-[#0ef] z-50 p-6 flex flex-col gap-4">
         <a href="#home" class="text-white hover:text-[#0ef] text-base">Home</a>
@@ -559,10 +552,10 @@
             <p>MCA student passionate about software development, software engineering, Python, SQL and hands-on with
                 AI/ML projects.</p>
             <div class="social-media">
-                <a href="https://linkedin.com/in/amruta-hegde-1972b5342" target="_blank"><i
+                <a href="https://linkedin.com/in/amruta-hegde-1972b5342" target="_blank" rel="noopener"><i
                         class="fab fa-linkedin-in"></i></a>
-                <a href="https://github.com/amrutahere08" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=hegdeamruta28@gmail.com" target="_blank"><i
+                <a href="https://github.com/amrutahere08" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
+                <a href="mailto:hegdeamruta28@gmail.com" target="_blank" rel="noopener"><i
                         class="fas fa-envelope"></i></a>
                 <a href="#contact"><i class="fas fa-user-circle"></i></a>
             </div>
@@ -589,8 +582,8 @@
             <h2 class="std-section-title" style="margin-bottom: 0.25rem;">
                 About Me
             </h2>
-            <div class="std-section-underline" style="margin-bottom: 1rem;">
-            </div>
+            <div class="std-section-underline" style="margin-bottom: 1rem;"></div>
+
             <div class="grid-system" style="gap: 1.5rem;">
                 <div class="gradient-border card-3d" style="padding: 1.75rem;">
                     <h3 class="text-2xl font-bold mb-4" style="color:#00ffe1">Background</h3>
@@ -606,23 +599,16 @@
                         and Tableau. My project experience includes building end-to-end applications, working with
                         databases and APIs, and applying analytical techniques to derive meaningful insights.
                     </p>
-                    <p class="muted leading-relaxed mb-6">
+                    <p class="muted leading-relaxed">
                         I continuously work on strengthening my technical skills by exploring modern development
                         practices and data-oriented approaches. I enjoy learning new technologies and applying them to
                         practical scenarios to create efficient and scalable software solutions.
-                    </p>
-                    <p class="muted leading-relaxed">
-                        I am actively seeking opportunities in software development, full-stack development, or software
-                        engineering roles, where I can contribute to building reliable, user-focused solutions while
-                        growing professionally.
                     </p>
                 </div>
 
                 <div class="gradient-border card-3d" style="padding: 1.75rem;">
                     <h3 class="text-2xl font-bold mb-6" style="color:#00ffe1">Quick Facts</h3>
                     <div class="space-y-6" style="padding-left: 0.5rem;">
-                        <!-- Fact 1 -->
-                        <!-- Fact 1 -->
                         <div class="mb-2">
                             <div class="flex items-center gap-3 mb-1">
                                 <i class="fas fa-graduation-cap text-xl" style="color:#a400ff"></i>
@@ -632,8 +618,6 @@
                             <div class="ml-8 text-lg leading-tight" style="color:#fff">8.48 (MCA)</div>
                         </div>
 
-                        <!-- Fact 2 -->
-                        <!-- Fact 2 -->
                         <div class="mb-2">
                             <div class="flex items-center gap-3 mb-1">
                                 <i class="fas fa-map-marker-alt text-xl" style="color:#a400ff"></i>
@@ -643,8 +627,6 @@
                             <div class="ml-8 text-lg leading-tight" style="color:#fff">Bengaluru, India</div>
                         </div>
 
-                        <!-- Fact 3 -->
-                        <!-- Fact 3 -->
                         <div class="mb-2">
                             <div class="flex items-center gap-3 mb-1">
                                 <i class="fas fa-language text-xl" style="color:#a400ff"></i>
@@ -655,8 +637,6 @@
                                 (Advanced)</div>
                         </div>
 
-                        <!-- Fact 4 -->
-                        <!-- Fact 4 -->
                         <div class="mb-2">
                             <div class="flex items-center gap-3 mb-1">
                                 <i class="fas fa-lightbulb text-xl" style="color:#a400ff"></i>
@@ -667,8 +647,6 @@
                                 Full-stack</div>
                         </div>
 
-                        <!-- Fact 5 (New Filler) -->
-                        <!-- Fact 5 (New Filler) -->
                         <div class="mb-2">
                             <div class="flex items-center gap-3 mb-1">
                                 <i class="fas fa-users text-xl" style="color:#a400ff"></i>
@@ -679,8 +657,6 @@
                             </div>
                         </div>
 
-                        <!-- Fact 6 -->
-                        <!-- Fact 6 -->
                         <div class="mb-2">
                             <div class="flex items-center gap-3 mb-1">
                                 <i class="fas fa-user-tie text-xl" style="color:#a400ff"></i>
@@ -691,8 +667,6 @@
                             </div>
                         </div>
 
-                        <!-- Fact 7 -->
-                        <!-- Fact 7 -->
                         <div class="mb-2">
                             <div class="flex items-center gap-3 mb-1">
                                 <i class="fas fa-building text-xl" style="color:#a400ff"></i>
@@ -702,8 +676,6 @@
                             <div class="ml-8 text-lg leading-tight" style="color:#fff">Remote / Hybrid / On-site</div>
                         </div>
 
-                        <!-- Fact 8 -->
-                        <!-- Fact 8 -->
                         <div class="mb-2">
                             <div class="flex items-center gap-3 mb-1">
                                 <i class="fas fa-camera text-xl" style="color:#a400ff"></i>
@@ -724,11 +696,9 @@
             <h2 class="std-section-title" style="margin-bottom: 0.25rem;">
                 Technical Skills
             </h2>
-            <div class="std-section-underline" style="margin-bottom: 1rem;">
-            </div>
-            <div class="grid-system">
+            <div class="std-section-underline" style="margin-bottom: 1rem;"></div>
 
-                <!-- Programming Languages -->
+            <div class="grid-system">
                 <div class="card-3d gradient-border" style="padding: 1.75rem;">
                     <div class="flex items-center gap-3 mb-4">
                         <i class="fas fa-code text-xl" style="color:#a400ff"></i>
@@ -744,7 +714,6 @@
                     </div>
                 </div>
 
-                <!-- Data Science & ML -->
                 <div class="card-3d gradient-border" style="padding: 1.75rem;">
                     <div class="flex items-center gap-3 mb-4">
                         <i class="fas fa-brain text-xl" style="color:#a400ff"></i>
@@ -760,7 +729,6 @@
                     </div>
                 </div>
 
-                <!-- Visualization & Analytics -->
                 <div class="card-3d gradient-border" style="padding: 1.75rem;">
                     <div class="flex items-center gap-3 mb-4">
                         <i class="fas fa-chart-line text-xl" style="color:#a400ff"></i>
@@ -775,7 +743,6 @@
                     </div>
                 </div>
 
-                <!-- Tools & Platforms -->
                 <div class="card-3d gradient-border" style="padding: 1.75rem;">
                     <div class="flex items-center gap-3 mb-4">
                         <i class="fas fa-tools text-xl" style="color:#a400ff"></i>
@@ -791,7 +758,6 @@
                     </div>
                 </div>
 
-                <!-- Databases -->
                 <div class="card-3d gradient-border" style="padding: 1.75rem;">
                     <div class="flex items-center gap-3 mb-4">
                         <i class="fas fa-database text-2xl" style="color:#a400ff"></i>
@@ -809,11 +775,9 @@
     <!-- Projects Section -->
     <section id="projects" class="py-8 px-6 fade-in" style="margin-top: 4rem;">
         <div class="std-container">
-            <h2 class="std-section-title" style="margin-bottom: 0.25rem;">
-                Projects
-            </h2>
-            <div class="std-section-underline" style="margin-bottom: 1rem;">
-            </div>
+            <h2 class="std-section-title" style="margin-bottom: 0.25rem;">Projects</h2>
+            <div class="std-section-underline" style="margin-bottom: 1rem;"></div>
+
             <div class="grid-system">
 
                 <!-- AI-Driven University Assistant (moved to top; removed "(Ongoing)" from title; added repo link) -->
@@ -840,8 +804,9 @@
                         (dlib), SQLAlchemy, MySQL, Gemini LLM, IoT, REST APIs</div>
 
                     <!-- Repo button added -->
-                    <div class="mt-auto">
-                        <a class="btn btn-sm" href="https://github.com/amrutahere08/Smart_Campus_Management_System.git"
+                    <div class="mt-auto" style="margin-top:1rem;">
+                        <a class="btn btn-sm"
+                            href="https://github.com/amrutahere08/Smart_Campus_Management_System.git"
                             target="_blank" rel="noopener noreferrer" style="padding: 6px 12px; font-size: 13px;">
                             <i class="fab fa-github mr-2"></i>View
                         </a>
@@ -868,10 +833,10 @@
                     <div class="text-sm muted">Published: July 2024</div>
 
                     <!-- Repo button added -->
-                    <div class="mt-auto">
+                    <div class="mt-auto" style="margin-top:1rem;">
                         <a class="btn btn-sm"
-                            href="https://github.com/amrutahere08/Online-Intelligent-Tourist-System.git" target="_blank"
-                            rel="noopener noreferrer">
+                            href="https://github.com/amrutahere08/Online-Intelligent-Tourist-System.git"
+                            target="_blank" rel="noopener noreferrer">
                             <i class="fab fa-github mr-2"></i>View
                         </a>
                     </div>
@@ -897,7 +862,7 @@
                     <div class="text-sm muted">Published: July 2025</div>
 
                     <!-- Repo button added -->
-                    <div class="mt-auto">
+                    <div class="mt-auto" style="margin-top:1rem;">
                         <a class="btn btn-sm" href="https://github.com/amrutahere08/AgroTracking.git" target="_blank"
                             rel="noopener noreferrer" style="padding: 6px 12px; font-size: 13px;">
                             <i class="fab fa-github mr-2"></i>View
@@ -923,7 +888,7 @@
                     </div>
                     <div class="text-sm muted mb-2">Tech Stack: ReactJS, NodeJS, ExpressJS, MongoDB</div>
 
-                    <div class="mt-auto">
+                    <div class="mt-auto" style="margin-top:1rem;">
                         <a class="btn btn-sm" href="https://github.com/amrutahere08/Smart_Placement_Portal.git"
                             target="_blank" rel="noopener noreferrer" style="padding: 6px 12px; font-size: 13px;">
                             <i class="fab fa-github mr-2"></i>View
@@ -935,17 +900,13 @@
         </div>
     </section>
 
-    <!-- Academic Works Section (NEW) -->
+    <!-- Academic Works Section -->
     <section id="academic" class="py-8 px-6 fade-in" style="margin-top: 4rem;">
         <div class="std-container">
-            <h2 class="std-section-title" style="margin-bottom: 0.25rem;">
-                Academic Works
-            </h2>
-            <div class="std-section-underline" style="margin-bottom: 1rem;">
-            </div>
-            <div class="grid-system">
+            <h2 class="std-section-title">Academic Works</h2>
+            <div class="std-section-underline" style="margin-bottom: 1rem;"></div>
 
-                <!-- IPL Match Outcome Prediction -->
+            <div class="grid-system">
                 <div class="card-3d gradient-border" style="padding: 1.75rem;">
                     <div class="flex items-center gap-3 mb-4">
                         <i class="fas fa-baseball-bat-ball text-3xl" style="color:#00ffe1"></i>
@@ -963,9 +924,7 @@
                             style="border: 1px solid #a400ff; color: #fff;">Sports Analytics</span>
                     </div>
                     <div class="text-sm muted">Published: June 2025</div>
-
-                    <!-- Repo button added -->
-                    <div class="mt-auto">
+                    <div class="mt-auto" style="margin-top:1rem;">
                         <a class="btn btn-sm" href="https://github.com/amrutahere08/IPLAnalysis.git" target="_blank"
                             rel="noopener noreferrer" style="padding: 6px 12px; font-size: 13px;">
                             <i class="fab fa-github mr-2"></i>View
@@ -973,7 +932,6 @@
                     </div>
                 </div>
 
-                <!-- Climate Change and Disaster Impact Analysis -->
                 <div class="card-3d gradient-border" style="padding: 1.75rem;">
                     <div class="flex items-center gap-3 mb-4">
                         <i class="fas fa-cloud-sun-rain text-3xl" style="color:#00ffe1"></i>
@@ -993,9 +951,7 @@
                             style="border: 1px solid #a400ff; color: #fff;">Impact Study</span>
                     </div>
                     <div class="text-sm muted">Published: June 2025</div>
-
-                    <!-- Repo button added -->
-                    <div class="mt-auto">
+                    <div class="mt-auto" style="margin-top:1rem;">
                         <a class="btn btn-sm" href="https://github.com/amrutahere08/Climate-Change-Analysis.git"
                             target="_blank" rel="noopener noreferrer">
                             <i class="fab fa-github mr-2"></i>View
@@ -1006,6 +962,175 @@
             </div>
         </div>
     </section>
-    ...
+
+    <!-- Education Section -->
+    <section id="education" class="py-8 px-6 fade-in" style="margin-top: 4rem;">
+        <div class="std-container">
+            <h2 class="std-section-title">Education</h2>
+            <div class="std-section-underline" style="margin-bottom: 1rem;"></div>
+
+            <div class="grid-system">
+                <div class="card-3d gradient-border" style="padding: 1.75rem;">
+                    <h3 class="text-xl font-bold mb-2" style="color:#00ffe1">Master of Computer Applications (MCA)</h3>
+                    <div class="text-sm muted mb-3">Chanakya University, Bengaluru</div>
+                    <div class="text-sm muted">Expected: 2026 | CGPA: 8.48</div>
+                </div>
+
+                <div class="card-3d gradient-border" style="padding: 1.75rem;">
+                    <h3 class="text-xl font-bold mb-2" style="color:#00ffe1">Bachelor of Commerce (B.Com)</h3>
+                    <div class="text-sm muted mb-3">[Your College Name]</div>
+                    <div class="text-sm muted">Year: 2021</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-8 px-6 fade-in" style="margin-top: 4rem;">
+        <div class="std-container">
+            <h2 class="std-section-title">Experience</h2>
+            <div class="std-section-underline" style="margin-bottom: 1rem;"></div>
+
+            <div class="grid-system">
+                <div class="card-3d gradient-border" style="padding: 1.75rem;">
+                    <h3 class="text-xl font-bold mb-2" style="color:#00ffe1">Intern - Software / Data</h3>
+                    <div class="text-sm muted mb-2">Worked on ML model prototyping, backend integrations, and dashboards.</div>
+                    <div class="text-sm muted">Tools: Python, Flask, SQL, Tableau</div>
+                </div>
+
+                <div class="card-3d gradient-border" style="padding: 1.75rem;">
+                    <h3 class="text-xl font-bold mb-2" style="color:#00ffe1">Project Contributor / Freelance</h3>
+                    <div class="text-sm muted mb-2">Built small web apps and automation scripts for clients and personal projects.</div>
+                    <div class="text-sm muted">Stack: React, Node, MySQL, OpenCV</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="py-8 px-6 fade-in" style="margin-top: 4rem;">
+        <div class="std-container">
+            <h2 class="std-section-title">Certifications</h2>
+            <div class="std-section-underline" style="margin-bottom: 1rem;"></div>
+
+            <div class="grid-system">
+                <div class="card-3d gradient-border" style="padding: 1.75rem;">
+                    <h3 class="text-lg font-bold" style="color:#00ffe1">Machine Learning - [Provider]</h3>
+                    <div class="text-sm muted">Completed: 2024</div>
+                </div>
+
+                <div class="card-3d gradient-border" style="padding: 1.75rem;">
+                    <h3 class="text-lg font-bold" style="color:#00ffe1">Data Visualization with Power BI - [Provider]</h3>
+                    <div class="text-sm muted">Completed: 2023</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-8 px-6 fade-in" style="margin-top: 4rem;">
+        <div class="std-container">
+            <h2 class="std-section-title">Contact</h2>
+            <div class="std-section-underline" style="margin-bottom: 1rem;"></div>
+
+            <div class="grid-system">
+                <div class="card-3d gradient-border" style="padding: 1.75rem;">
+                    <h3 class="text-xl font-bold mb-2" style="color:#00ffe1">Let's connect</h3>
+                    <p class="text-sm muted mb-4">I'm open to opportunities and collaborations — feel free to reach out.</p>
+
+                    <form id="contact-form" action="#" method="post">
+                        <input class="std-input mb-3" type="text" name="name" placeholder="Your name" required>
+                        <input class="std-input mb-3" type="email" name="email" placeholder="Your email" required>
+                        <textarea class="std-input mb-3" name="message" rows="5" placeholder="Message" required></textarea>
+                        <button type="submit" class="std-btn">Send Message</button>
+                    </form>
+                </div>
+
+                <div class="card-3d gradient-border" style="padding: 1.75rem;">
+                    <h3 class="text-xl font-bold mb-2" style="color:#00ffe1">Details</h3>
+                    <div class="text-sm muted mb-2"><strong>Email:</strong> hegdeamruta28@gmail.com</div>
+                    <div class="text-sm muted mb-2"><strong>Location:</strong> Bengaluru, India</div>
+                    <div class="text-sm muted"><strong>GitHub:</strong> <a href="https://github.com/amrutahere08" target="_blank" rel="noopener" style="color:#00ffe1">github.com/amrutahere08</a></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="std-container">
+            <div style="display:flex;justify-content:center;gap:12px;margin-bottom:8px">
+                <a href="https://linkedin.com/in/amruta-hegde-1972b5342" target="_blank" rel="noopener" class="social-icon-box"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://github.com/amrutahere08" target="_blank" rel="noopener" class="social-icon-box"><i class="fab fa-github"></i></a>
+                <a href="mailto:hegdeamruta28@gmail.com" class="social-icon-box"><i class="fas fa-envelope"></i></a>
+            </div>
+            <div>© <span id="year"></span> Amruta Hegde — All rights reserved.</div>
+        </div>
+    </footer>
+
+    <script>
+        // Set footer year
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Mobile menu toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Simple typing effect for the hero headings
+        const type1El = document.getElementById('type-1');
+        const type2El = document.getElementById('type-2');
+
+        const lines1 = ["Hi, I'm Amruta.", "MCA Student | Software Developer"];
+        const lines2 = ["Data Science & Analytics", "Machine Learning • Full-stack • CV"];
+
+        function typeLines(el, lines, delay = 80, hold = 1500) {
+            let lineIndex = 0;
+            let charIndex = 0;
+            let forward = true;
+
+            function tick() {
+                const current = lines[lineIndex];
+                if (forward) {
+                    charIndex++;
+                    el.textContent = current.slice(0, charIndex);
+                    if (charIndex === current.length) {
+                        forward = false;
+                        setTimeout(tick, hold);
+                    } else {
+                        setTimeout(tick, delay);
+                    }
+                } else {
+                    charIndex--;
+                    el.textContent = current.slice(0, charIndex);
+                    if (charIndex === 0) {
+                        forward = true;
+                        lineIndex = (lineIndex + 1) % lines.length;
+                        setTimeout(tick, 200);
+                    } else {
+                        setTimeout(tick, delay / 2);
+                    }
+                }
+            }
+            tick();
+        }
+
+        // Start typing on both elements (staggered)
+        setTimeout(() => typeLines(type1El, lines1, 70, 1200), 300);
+        setTimeout(() => typeLines(type2El, lines2, 60, 1400), 600);
+
+        // Basic contact form handler (placeholder)
+        const contactForm = document.getElementById('contact-form');
+        if (contactForm) {
+            contactForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                // Simple feedback - user can replace with real endpoint
+                alert('Thanks! Your message has been received. (This form is a demo.)');
+                contactForm.reset();
+            });
+        }
+    </script>
 </body>
+
 </html>
